@@ -1,0 +1,479 @@
+/*truco para que el fondo de cada section llegue hasta el final*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/*colores por categoria y estilos para reutilizar*/
+:root{
+    --colorImpar: rgb(230, 230, 230);
+    --colorImparVfx: rgb(255, 206, 252);
+    --colorImparArts: rgb(252, 187, 187);
+    --colorImparDev: rgb(252, 224, 187);
+    --colorPar: rgb(150,150,150);
+    --colorParVfx: rgb(145, 116, 146);
+    --colorParArts: rgb(149, 102, 102);
+    --colorParDev: rgb(149, 140, 102);
+    --generalColor: #009CDE; 
+    --vfxColor: #CA00DE;
+    --artsColor: #DE002D;
+    --devColor: #DEB100;
+    --bordeGeneral: 5px;
+    --tamanoImagenes: 200px;
+}
+/*base para convertir cuadrados en hexagono a futuro*/
+.hexaMain{
+    display: inline-block;
+    position: relative;
+    width: var(--tamanoImagenes);
+    margin: 10px;
+    text-align: center;
+    border-radius: 10%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.hexaMain img{
+    width: calc(var(--tamanoImagenes) - 2vw);
+    height: auto;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.hexaMain h3{
+   position: absolute;
+   font-size: 30pt;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.generalStyleBorder{
+    border: solid var(--bordeGeneral);
+    border-color: var(--generalColor);
+    background-color: var(--generalColor);
+}
+.vfxStyleBorder{
+    border: solid var(--bordeGeneral);
+    border-color: var(--vfxColor);
+    background-color: var(--vfxColor);
+}
+.artsStyleBorder{
+    border: solid var(--bordeGeneral);
+    border-color: var(--artsColor);
+    background-color: var(--artsColor);
+}
+.devStyleBorder{
+    border: solid var(--bordeGeneral);
+    border-color: var(--devColor);
+    background-color: var(--devColor);
+}
+h1{
+    font-size: 200px;
+    opacity: 0.3;
+}
+a{
+    text-decoration: none;
+    color: var(--colorImpar);
+    text-shadow: 0px 0px 5px black;
+}
+a:hover{
+    color: white;
+    text-shadow: 3px 3px 5px black ;
+}
+
+
+/*primero ids y despues clases de cada section*/
+/*Header*/
+header{
+    display: inline-block;
+}
+.logoTop{
+    display: inline-block;
+    width: 50px;
+}
+.nav{
+    display: inline-block;
+    position: fixed;
+    top: 8px;
+    right: 16px;
+    z-index: 2;
+}
+.nav ul li ul{
+    display: none;
+    list-style-type: none;
+    top: 8px;
+    right: 16px;
+}
+.nav ul li{
+    list-style-type: none;
+}
+.nav ul li:hover > ul{
+    display: block ;
+}
+/*Home*/
+#home{
+    background-color: var(--colorImpar);
+    width: auto;
+    height: 100vh;
+}
+/*me toco solucionar con porcentaje para que cubra todo el width*/
+.carruselHome{
+    padding: 35px;
+    display: inline-block;
+    background-color: var(--colorImpar);
+    width: auto; 
+}
+/*VFX*/
+.carruselHomeVfx{
+    padding: 35px;
+    display: inline-block;
+    background-color: var(--colorImparVfx);
+    width: 100%; 
+}
+/*el video se ajusta mas adelante*/
+.vReel{
+    display: inline;
+    width: var(--tamanoImagenes);
+}
+/*Arts*/
+.carruselHomeArts{
+    padding: 35px;
+    display: inline-block;
+    background-color: var(--colorImparArts);
+    width: 100%; 
+}
+.shopPrev{
+    display: inline;
+    width: var(--tamanoImagenes);
+}
+/*Dev*/
+.carruselHomeDev{
+    padding: 35px;
+    display: inline-block;
+    background-color: var(--colorImparDev);
+    width: 100%; 
+}
+/*Sigue general*/
+.homeClass{
+    background-color: var(--colorImpar);
+}
+.homeClassVfx{
+    background-color: var(--colorImparVfx);
+}
+.hexaMain:hover{
+    opacity: 0.5;
+}
+/*About*/
+.aboutClass{
+    background-color: var(--colorPar);
+    display:block;
+    width: auto;
+    padding: 35px;  
+}
+/*VFX*/
+.aboutClassVfx{
+    background-color: var(--colorParVfx);
+    display:block;
+    width: 100%;
+    padding: 35px;  
+}
+/*Arts*/
+.aboutClassArts{
+    background-color: var(--colorParArts);
+    display:block;
+    width: 100%;
+    padding: 35px;  
+}
+/*Dev*/
+.aboutClassDev{
+    background-color: var(--colorParDev);
+    display:block;
+    width: 100%;
+    padding: 35px;  
+}
+.aboutContent{
+    display: auto;
+    position:relative;
+    width: 10px;
+    height: 300px;
+}
+.flotadorIzq{
+float: left;
+}
+.aboutContent div p{
+    display: block;
+    height: auto;
+    color: white;
+    width: 600px;
+}
+.aboutContent h1{
+    text-align: center;
+    height: 150px;
+    width: auto;
+    position: absolute;
+    bottom: -35px;
+    overflow: hidden;
+}
+.aboutContent,a img{
+    width: 200px;
+}
+/*skillset*/
+.skillsetClass{
+    /* background-color: var(--colorImpar); */
+    background-image: url("./../Assets/Fondo.png");
+    background-size: cover;
+    display: block;
+    position: relative;
+    width: auto;
+    padding: 100px;
+}
+.skillsetClass h1{
+    text-align: center;
+    height: 150px;
+    width: auto;
+    position: absolute;
+    bottom: -35px;
+    overflow: hidden;
+}
+#generalSkills{
+    display:inline;
+}
+.skillItem{
+    display: inline-block;
+    position: relative;
+    width: calc(var(--tamanoImagenes) - 100px);
+    height: 100px;
+}
+.skillItem img{
+    display: inline-block;
+    position: relative;
+    width: calc(var(--tamanoImagenes) - 100px);
+    height: 100px;
+}
+.skillDesc{
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.skillItem:hover .skillDesc{
+   visibility: visible;
+   z-index: 2;
+}
+/*Projects*/
+#Projects{
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.projectsClass{
+    position: relative;
+    background-color: var(--colorPar);
+    display: block;
+    width: 100%;
+}
+.projectsClassVfx{
+    position: relative;
+    background-color: var(--colorParVfx);
+    display: block;
+    width: 100%;
+}
+.projectsClassArts{
+    position: relative;
+    background-color: var(--colorParArts);
+    display: block;
+    width: 100%;
+}
+.projectsClass h1{
+    text-align: center;
+    height: 150px;
+    width: auto;
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+}
+.projectsClassVfx h1{
+    text-align: center;
+    height: 150px;
+    width: auto;
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+}
+.projectsClassArts h1{
+    text-align: center;
+    height: 150px;
+    width: auto;
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+}
+.projectDesc{
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.projectsClass:hover .projectDesc{
+    visibility: visible;
+}
+.projectsClass:hover h3{
+    visibility: hidden;
+}
+/*VFX*/
+.projectsClassVfx:hover .projectDesc{
+    visibility: visible;
+}
+.projectsClassVfx:hover h3{
+    visibility: hidden;
+}
+/*Arts*/
+.projectsClassArts:hover .projectDesc{
+    visibility: visible;
+}
+.projectsClassArts:hover h3{
+    visibility: hidden;
+}
+/*Shop Overview*/
+#fastShop{
+    background-color: var(--colorImparArts);
+    position: relative;
+    height: auto; 
+}
+/*Contact*/
+#Contact{
+    background-color: var(--colorImpar);
+    position: relative;
+    height: auto;
+}
+/*VFX*/
+#ContactVfx{
+    background-color: var(--colorImparVfx);
+    position: relative;
+    height: auto;
+}
+.contactClassVfx{
+    background-color: var(--colorImparVfx);
+    position: relative;
+    height: auto;
+}
+/*Arts*/
+#ContactArts{
+    background-color: var(--colorParArts);
+    position: relative;
+    height: auto;
+}
+.contactClassArts{
+    background-color: var(--colorParArts);
+    position: relative;
+    height: auto;
+}
+/*Dev*/
+#ContactDev{
+    background-color: var(--colorParDev);
+    position: relative;
+    height: auto;
+}
+.contactClassDev{
+    background-color: var(--colorParDev);
+    position: relative;
+    height: auto;
+}
+#contact h1{
+    text-align: center;
+    height: 150px;
+    width: auto;
+    position: absolute;
+    bottom: -350px;
+    overflow: hidden;
+    margin: 0px;
+}
+/*Formato de envio*/
+form{
+    background-color: var(--colorPar);
+    text-align: center;
+    padding: 15px;
+}
+form label{
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    width: 100%;
+    font-size: large;
+}
+form input{
+    margin: 10px;
+    border-radius: 5px;
+    font-size: large;
+}
+form p{
+    margin: 10px;
+    padding: 5px;
+}
+form h2{
+    color: white;
+    padding: 5px;
+    background-color: var(--generalColor);
+}
+input[type=submit], input[type=reset] {
+    background-color: var(--generalColor);
+    font-size: large;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+input[type=reset]:hover{
+      background-color: white;
+      color: var(--generalColor);
+  }
+input[type=submit]:hover {
+    background-color: white;
+    color: var(--generalColor);
+}
+select{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--colorImpar);
+}
+.divContact{
+    width: 100%;
+    padding: 35px;
+    position: relative;
+   display: inline-flex;
+   flex-direction:row;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+}
+.linkBox{
+    display: inline-flex;
+    padding: 5px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.linkBox:hover{
+    opacity: 0.5;
+}
+/*footer*/
+footer{
+   text-align: center;
+}
+/*Shop*/
+#bestProducts{
+    background-color: var(--colorImparArts);
+    width: auto;
+    height: 50vh;  
+}
+#productsByShopRb{
+    background-color: var(--colorParArts);
+    width: auto;
+    height: auto;  
+}
+#productsByShopS6{
+    background-color: var(--colorImparArts);
+    width: auto;
+    height: auto;  
+}
