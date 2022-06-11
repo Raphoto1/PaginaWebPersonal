@@ -626,6 +626,7 @@ a:hover{
 .backStyleBorder{
     display: none;
 }
+/*HOME*/
 #Home{
     display: flex;
     width: 100vw;
@@ -665,7 +666,7 @@ a:hover{
     align-items: flex-end;
     grid-area: text;
 }
-/*About*/
+/*ABOUT*/
 #About{
     display: grid;
     grid-template-areas: "Foto"
@@ -697,9 +698,83 @@ a:hover{
 .aboutTitle{
     display: flex;
     position: relative;
-    height: 10vh;
+    height: 5vh;
     grid-area: Titulo;
-    bottom: -30%;
+    bottom: 30%;
+    font-size: 37vw;
+}
+/*SKILLSET*/
+.groupSkill{
+    display: grid;
+    grid-template-areas:"Titulo" 
+                        "generalSkills"
+                        "vfxSkills"
+                        "artSkills"
+                        "devSkills";
+    background-color: var(--colorImpar);
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+.generalSkills{
+    grid-area: generalSkills;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.groupSkill h3{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+.VFX{
+    grid-area: vfxSkills;
+}
+.Art{
+    grid-area: artSkills;
+}
+.groupSkill h1{
+    grid-area: Titulo;
     font-size: 30vw;
+    position: relative;
+    top: -170%;
+    height: 5vh;
+}
+.skillItem{
+    transform: scale(0.9);
+    padding: 0;
+}
+.skillItem a{
+    position: absolute;
+    z-index: 2;
+}
+/*PROJECTS*/
+#Projects{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--colorPar);
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.groupProjects{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 90vh;
+}
+.projectDesc{
+    position: absolute;
+    width: 20vw;
+}
+#Projects h1{
+    grid-area: Titulo;
+    font-size: 28vw;
+    position: relative;
+    height: 5vh;
+    bottom: 2.5%;
 }
 }
