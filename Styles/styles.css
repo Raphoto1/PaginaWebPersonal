@@ -771,10 +771,41 @@ a:hover{
     width: 20vw;
 }
 #Projects h1{
-    grid-area: Titulo;
     font-size: 28vw;
     position: relative;
     height: 5vh;
     bottom: 2.5%;
+}
+.projectHov{
+    transform: scale(1.4);
+}
+/*CONTACT*/
+#Contact{
+    height: 100vh;
+    background-color: var(--colorImpar);
+    overflow: hidden;
+}
+.divContact{
+    display: flex;
+    height: 90vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.divContact a{
+    text-align: center;
+}
+.divContact svg{
+    width: 40vw;
+}
+#Contact h1{
+    font-size: 28vw;
+    position: relative;
+    height: 5vh;
+    bottom: -1%;
+}
+footer{
+    display: none;
 }
 }
