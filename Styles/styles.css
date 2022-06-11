@@ -133,6 +133,10 @@ header{
     width: 100vw;
     height: 95vh;
 }
+.homeClassArts{
+    height: 100vh;
+    background-color: var(--colorImparArts);
+}
 .carruselHome{
     display: grid;
     width: 100vw;
@@ -146,6 +150,13 @@ header{
     align-content: center;
     overflow: hidden;
 }
+.carruselHomeArts{
+    display: grid;
+    grid-template-areas: "Foto shopPrev"
+                        "Texto Texto";
+    background-color: var(--colorImparArts);
+    height: 100hv;
+}
 .Foto{
     display: flex;
     grid-area: Foto;
@@ -153,6 +164,9 @@ header{
     align-items: center;
     transform: scale(150%);
     text-align: center;
+}
+.fotoArts{
+    
 }
 .Hexagonos1{
     display: flex;
@@ -188,6 +202,9 @@ header{
     align-content: flex-start;
     grid-area: Texto;
     transform: translatey(-50%);
+}
+.shopPrev{
+    grid-area: shopPrev;
 }
 /*About*/
 .aboutClass{
