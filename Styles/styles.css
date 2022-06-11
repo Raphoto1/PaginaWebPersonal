@@ -831,7 +831,7 @@ footer{
     grid-template-areas:"Titulo"
                         "Formato"
                         "General";
-    height: 100vh;
+    height: auto;
     align-content:center;
     justify-content: center;
     background-color: var(--colorPar);
