@@ -552,7 +552,7 @@ header{
     display: block ;
 }
 h1{
-    font-size: 15vw;
+    font-size: 18vw;
     opacity: 0.3;
 }
 /*colores*/
@@ -680,22 +680,26 @@ a:hover{
 }
 .aboutFoto{
     display: flex;
+    position: relative;
     grid-area: Foto;
     transform: scale(1.5);
-    align-self: center;
+    left: 25%;
+    top: 25%;
 }
 .aboutDesc{
     display: flex;
     grid-area: Desc;
     font-size: x-large;
     color: white;
-    height: 60vh;
+    height: 70vh;
     align-items: center;
 }
 .aboutTitle{
     display: flex;
-    align-items: baseline;
+    position: relative;
     height: 10vh;
     grid-area: Titulo;
+    bottom: -30%;
+    font-size: 30vw;
 }
 }
