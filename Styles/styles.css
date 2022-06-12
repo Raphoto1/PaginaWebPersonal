@@ -133,10 +133,7 @@ header{
     width: 100vw;
     height: 95vh;
 }
-.homeClassArts{
-    height: 100vh;
-    background-color: var(--colorImparArts);
-}
+
 .carruselHome{
     display: grid;
     width: 100vw;
@@ -150,13 +147,7 @@ header{
     align-content: center;
     overflow: hidden;
 }
-.carruselHomeArts{
-    display: grid;
-    grid-template-areas: "Foto shopPrev"
-                        "Texto Texto";
-    background-color: var(--colorImparArts);
-    height: 100hv;
-}
+
 .Foto{
     display: flex;
     grid-area: Foto;
@@ -165,9 +156,7 @@ header{
     transform: scale(150%);
     text-align: center;
 }
-.fotoArts{
-    
-}
+
 .Hexagonos1{
     display: flex;
     grid-area: Hexagonos1;
@@ -203,9 +192,35 @@ header{
     grid-area: Texto;
     transform: translatey(-50%);
 }
+/*HOME arts*/
+.homeClassArts{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--colorImparArts);
+}
+.carruselHomeArts{
+    display: grid;
+    grid-template-areas: "Foto shopPrev"
+                        "Texto Texto";
+    background-color: var(--colorImparArts);
+    height: 100hv;
+    width: 100vw;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+}
 .shopPrev{
     grid-area: shopPrev;
 }
+.textoHomeArts{
+    display: flex;
+    grid-area: Texto;
+}
+/* .carruselHomeArts h1{
+    display: flex;
+    align-items: flex-end;
+} */
 /*About*/
 .aboutClass{
     background-color: var(--colorPar);
@@ -244,9 +259,26 @@ header{
     grid-area: Titulo;
     transform: translatey(20%);
 }
+/*About Arts*/
+.artsColorPar{
+    background-color: var(--colorParArts);
+}
+.artsColorImpar{
+    background-color: var(--colorImparArts);
+}
 /*skillset*/
 .skillsetClass{
     background-color: var(--colorImpar);
+    /* background-image: url("./../Assets/Fondo.png"); */
+    /* background-size: cover; */
+    display: flex;
+    width: 98.1vw;
+    height: 95vh;
+    padding: 2%;
+    overflow: hidden;
+}
+.skillsetClassArts{
+    background-color: var(--colorImparArts);
     /* background-image: url("./../Assets/Fondo.png"); */
     /* background-size: cover; */
     display: flex;
@@ -348,6 +380,15 @@ header{
     justify-content: space-around;
     align-items: center;
 }
+#ProjectsArts{
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--colorParArts);
+    justify-content: space-around;
+    align-items: center;
+}
 .groupProjects{
     display: inline-flex;
     justify-content: space-evenly;
@@ -359,12 +400,7 @@ header{
     display: block;
     width: 100%;
 }
-.projectsClassArts{
-    position: relative;
-    background-color: var(--colorParArts);
-    display: block;
-    width: 100%;
-}
+
 .projectDesc{
     position: absolute;
     visibility: hidden;
@@ -389,9 +425,6 @@ header{
 /*Arts*/
 .projectsClassArts:hover .projectDesc{
     visibility: visible;
-}
-.projectsClassArts:hover h3{
-    visibility: hidden;
 }
 /*Shop Overview*/
 #fastShop{
