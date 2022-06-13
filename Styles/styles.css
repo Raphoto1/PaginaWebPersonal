@@ -380,15 +380,7 @@ header{
     justify-content: space-around;
     align-items: center;
 }
-#ProjectsArts{
-    display: flex;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--colorParArts);
-    justify-content: space-around;
-    align-items: center;
-}
+
 .groupProjects{
     display: inline-flex;
     justify-content: space-evenly;
@@ -412,6 +404,7 @@ header{
     bottom: -14%;
     left: 10%;
 }
+
 .projectHov:hover .projectDesc{
     visibility: visible;
 }
@@ -425,6 +418,20 @@ header{
 /*Arts*/
 .projectsClassArts:hover .projectDesc{
     visibility: visible;
+}
+#ProjectsArts h1{
+    position: absolute;
+    bottom: -14%;
+    left: 10%;
+}
+#ProjectsArts{
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--colorParArts);
+    justify-content: space-around;
+    align-items: center;
 }
 /*Shop Overview*/
 #fastShop{
