@@ -19,9 +19,9 @@
     --artsColor: #DE002D;
     --devColor: #DEB100;
     --bordeGeneral: 5px;
-    --tamanoImagenes: 30vh;
-    --tamanoImagenesIn: 25vh;
-    --tamanoImagenesSkill: 12vh;
+    --tamanoImagenes: 100%;
+    --tamanoImagenesIn: 100%;
+    --tamanoImagenesSkill: 150px;
 }
 
                 /*Media query desk*/
@@ -109,18 +109,21 @@ a:hover{
 }
 /*primero ids y despues clases de cada section*/
 /*Header*/
-header{
-    width: 100vw;
+header .cabeza{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .logoTop{
     display: inline-block;
     width: 50px;
 }
 .nav{
-    display: inline-block;
+    display: flex;
     position: fixed;
-    top: 8px;
-    right: 16px;
+    top: 15px;
+    right: 15px;
+    align-items: center;
     z-index: 2;
 }
 .nav ul li ul{
@@ -138,8 +141,8 @@ header{
 /*HOME*/
 .homeClass{
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: var(--colorPar);
 }
 .carruselHome{
@@ -148,7 +151,7 @@ header{
     "Titulo Hexa1 Hexa1"
     "Titulo Foto Hexa2"
     "Titulo Hexa3 Hexa3";
-    width: 100vw;
+    width: 100%;
 }
 .Foto{
     grid-area: Foto;
@@ -160,22 +163,19 @@ header{
     grid-area: Hexa1;
     display: flex;
     flex-flow: row nowrap;
-    width: 100vw;
-    height: 33vh;
+    width: 100%;
     justify-content: center;
 }
 .Hexagonos2{
     grid-area: Hexa2;
     display: flex;
     flex-flow: row nowrap;
-    height: 34vh;
 }
 .Hexagonos3{
     grid-area: Hexa3;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    height: 33vh;
 }
 .carruselHome h1{
     display: flex;
@@ -218,8 +218,8 @@ header{
 }
 .skillsetClass{
     background-color: var(--colorPar);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 .groupSkill{
     display: grid;
@@ -244,7 +244,7 @@ header{
 #generalSkills{
     grid-area: genSkills;
     display: inline-flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     align-content: stretch;
 }
@@ -297,8 +297,8 @@ header{
     background-color: var(--colorImpar);
     grid-template-areas: 
     "Titulo Projects";
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 .groupProjects{
     grid-area: Projects;
