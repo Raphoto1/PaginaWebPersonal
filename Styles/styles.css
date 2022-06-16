@@ -149,27 +149,32 @@ header .cabeza{
     display: grid;
     grid-template-areas:
     "Titulo Hexa1 Hexa1"
-    "Titulo Foto Hexa2"
+    "Titulo Hexa2 Hexa2"
     "Titulo Hexa3 Hexa3";
     width: 100%;
+    height: 100vh;
 }
 .Foto{
-    grid-area: Foto;
+    /* grid-area: Foto; */
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    max-width: 100%;
 }
 .Hexagonos1{
     grid-area: Hexa1;
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
+    width: Auto;
+    height: 100%;
     justify-content: center;
 }
 .Hexagonos2{
     grid-area: Hexa2;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-around;
 }
 .Hexagonos3{
     grid-area: Hexa3;
@@ -179,10 +184,10 @@ header .cabeza{
 }
 .carruselHome h1{
     display: flex;
-    width: 15vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     grid-area: Titulo;
-    font-size: 10vw;
+    font-size: 10rem;
     align-items: center;
 }
 /*ABOUT*/
@@ -191,7 +196,8 @@ header .cabeza{
     grid-template-areas: 
     "Titulo Foto"
     "Titulo Desc";
-    height: 100vh;
+    height: 100%;
+    height: 100%;
     background-color: var(--colorImpar);
 }
 .aboutFoto{
@@ -200,22 +206,25 @@ header .cabeza{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: auto;
-    height: auto;
+    border: 50px;
+    width: var(--tamanoImagenes);
+    height: var(--tamanoImagenes);
 }
 .aboutDesc{
     grid-area: Desc;
     display: flex;
     justify-content: center;
-    font-size: xx-large;
-    width: 50%;
+    font-size: 2rem;
+    height: 100%;
+    width: 100%;
 }
 .aboutTitle{
     grid-area: Titulo;
     writing-mode: vertical-rl;
     text-orientation:mixed;
-    font-size: 35vh;
+    font-size: 25rem;
 }
+/*SKILLSET*/
 .skillsetClass{
     background-color: var(--colorPar);
     width: 100%;
@@ -228,7 +237,7 @@ header .cabeza{
     "Titulo vfxSkills"
     "Titulo artSkills"
     "Titulo devSkills";
-    width: 100vw;
+    width: 100%;
     align-content: stretch;
 }
 .groupSkill h3{
@@ -243,10 +252,11 @@ header .cabeza{
 }
 #generalSkills{
     grid-area: genSkills;
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: stretch;
+    width: 100%;
 }
 .skillItem{
     display: flex;
@@ -336,6 +346,7 @@ header .cabeza{
     align-items: center;
     align-self: center;
     align-content: center;
+    flex-wrap: wrap;
 }
 .linkBox{
     display: flex;
@@ -344,13 +355,17 @@ header .cabeza{
     align-items: center;
     text-align: center;
 }
+.linkBox svg{
+    height: 25vh;
+}
 #Contact h1{
     grid-area: Titulo;
     display: flex;
-    align-self: center;
+    position: absolute;
+    justify-content: center;
     writing-mode: vertical-rl;
     text-orientation:mixed;
-    font-size: 25vh;
+    font-size: 28vh;
 }
 }
                 /*MOBILE*/
