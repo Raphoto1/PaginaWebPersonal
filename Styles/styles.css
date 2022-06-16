@@ -332,6 +332,7 @@ header .cabeza{
     text-orientation:mixed;
     font-size: 25vh;
 }
+/*CONTACT*/
 #Contact{
     display: grid;
     grid-template-areas: 
@@ -363,6 +364,21 @@ header .cabeza{
     writing-mode: vertical-rl;
     text-orientation:mixed;
     font-size: 28vh;
+}
+/*CONTACT form*/
+#contactForm{
+    display: grid;
+    grid-template-areas: 
+    "Titulo Formato"
+    "Titulo Links";
+}
+form{
+    display: inline-flex;
+    justify-content: center;
+}
+form label{
+    background-color: var(--bordeGeneral);
+    padding: 10%;
 }
 }
                 /*MOBILE*/
@@ -657,4 +673,5 @@ header .cabeza{
     footer{
         display: none;
     }
+    /*CONTACT Form*/
 }
