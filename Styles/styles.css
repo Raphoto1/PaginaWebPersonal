@@ -344,6 +344,7 @@ header .cabeza{
     grid-area: Links;
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
     align-items: center;
     align-self: center;
     align-content: center;
@@ -356,10 +357,28 @@ header .cabeza{
     align-items: center;
     text-align: center;
 }
+#ContactC{
+    display: grid;
+    grid-template-areas: 
+    "Titulo Links"
+    "Titulo Links";
+    background-color: var(--colorPar);
+    height: 100%;
+    width: 100%;
+}
 #Contact h1{
     grid-area: Titulo;
     display: flex;
-    position: absolute;
+    /* position: absolute; */
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation:mixed;
+    font-size: 28vh;
+}
+#ContactC h1{
+    grid-area: Titulo;
+    display: flex;
+    /* position: absolute; */
     justify-content: center;
     writing-mode: vertical-rl;
     text-orientation:mixed;
@@ -370,15 +389,57 @@ header .cabeza{
     display: grid;
     grid-template-areas: 
     "Titulo Formato"
-    "Titulo Links";
+    "Links Links";
 }
 form{
-    display: inline-flex;
-    justify-content: center;
+    background-color: var(--colorPar);
+    display: inline;
+    text-align: center;
+    padding: 15px;
 }
 form label{
-    background-color: var(--bordeGeneral);
-    padding: 10%;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    width: 100vw;
+    font-size: large;
+}
+form input{
+    margin: 10px;
+    border-radius: 5px;
+    font-size: large;
+}
+form p{
+    margin: 10px;
+    padding: 5px;
+}
+form h2{
+    color: white;
+    padding: 5px;
+    background-color: var(--generalColor);
+}
+input[type=submit], input[type=reset] {
+    background-color: var(--generalColor);
+    font-size: large;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+input[type=reset]:hover{
+      background-color: white;
+      color: var(--generalColor);
+  }
+input[type=submit]:hover {
+    background-color: white;
+    color: var(--generalColor);
+}
+select{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--colorImpar);
 }
 }
                 /*MOBILE*/
@@ -658,11 +719,21 @@ form label{
         background-color: var(--colorPar);
         justify-content: space-around;
     }
+    #ContactC{
+        display: grid;
+        grid-template-areas: 
+        "Titulo"
+        "Contact";
+        background-color: var(--colorPar);
+        height: 100%;
+        width: 100%;
+    }
     .divContact{
         grid-area: Contact;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        width: 100%;
     }
     .divContact h3{
         text-align: center;
@@ -670,8 +741,77 @@ form label{
     #Contact h1{
         grid-area: Titulo;
     }
+    #ContactC h1{
+        grid-area: Titulo;
+        display: flex;
+    /* position: absolute; */
+    justify-content: center;
+    /* writing-mode: vertical-rl;
+    text-orientation:mixed; */
+    font-size: 10vh;
+    }
     footer{
         display: none;
     }
     /*CONTACT Form*/
+    #contactForm{
+        display: grid;
+        grid-template-areas: 
+        "Titulo"
+        "Formato"
+        "Links";
+    }
+    form{
+        background-color: var(--colorPar);
+        display: inline;
+        text-align: center;
+        padding: 15px;
+    }
+    form label{
+        padding: 5px;
+        margin: 5px;
+        color: white;
+        width: 100%;
+        font-size: large;
+    }
+    form input{
+        margin: 10px;
+        border-radius: 5px;
+        font-size: large;
+    }
+    form p{
+        margin: 5px;
+        padding: 5px;
+    }
+    form h2{
+        color: white;
+        padding: 5px;
+        background-color: var(--generalColor);
+    }
+    input[type=submit], input[type=reset] {
+        background-color: var(--generalColor);
+        font-size: large;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    input[type=reset]:hover{
+          background-color: white;
+          color: var(--generalColor);
+      }
+    input[type=submit]:hover {
+        background-color: white;
+        color: var(--generalColor);
+    }
+    #contactReason{
+        width: 90%;
+    }
+    select{
+        border-radius: 5px;
+        padding: 5px;
+        background-color: var(--colorImpar);
+    }
 }
