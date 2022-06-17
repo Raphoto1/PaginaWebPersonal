@@ -59,8 +59,19 @@
     font-size: 5vh;
     text-align: center;
   }
+  @keyframes anim{
+    from {
+      opacity: 1;
+    }
+    to{
+      opacity: 0.2;
+    }
+  }
   .hexaMain:hover {
-    opacity: 0.8;
+    animation-name: anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
   .generalStyleBorder {
     border: solid var(--bordeGeneral);
@@ -68,19 +79,19 @@
     background-color: var(--generalColor);
   }
   .vfxStyleBorder {
-    border: solid var(--bordeGeneral);
     border-color: var(--vfxColor);
-    background-color: var(--vfxColor);
+    background: rgb(0,156,222);
+    background: linear-gradient(90deg, rgba(0,156,222,1) 0%, rgba(202,0,222,1) 100%);
   }
   .artsStyleBorder {
-    border: solid var(--bordeGeneral);
     border-color: var(--artsColor);
-    background-color: var(--artsColor);
+    background: rgb(0,156,222);
+    background: linear-gradient(90deg, rgba(0,156,222,1) 0%, rgba(222,0,45,1) 100%);
   }
   .devStyleBorder {
-    border: solid var(--bordeGeneral);
     border-color: var(--devColor);
-    background-color: var(--devColor);
+    background: rgb(0,156,222);
+    background: linear-gradient(90deg, rgba(0,156,222,1) 0%, rgba(222,177,0,1) 100%);
   }
   .backStyleBorder {
     border: solid var(--bordeGeneral);
