@@ -1,534 +1,433 @@
 /*truco para que el fondo de cada section llegue hasta el final*/
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 /*colores por categoria y estilos para reutilizar*/
-:root{
-    --colorImpar: rgb(230, 230, 230);
-    --colorImparVfx: rgb(255, 206, 252);
-    --colorImparArts: rgb(252, 187, 187);
-    --colorImparDev: rgb(252, 224, 187);
-    --colorPar: rgb(150,150,150);
-    --colorParVfx: rgb(145, 116, 146);
-    --colorParArts: rgb(149, 102, 102);
-    --colorParDev: rgb(149, 140, 102);
-    --generalColor: #009CDE; 
-    --vfxColor: #CA00DE;
-    --artsColor: #DE002D;
-    --devColor: #DEB100;
-    --bordeGeneral: 5px;
-    --tamanoImagenes: 30vh;
-    --tamanoImagenesIn: 25vh;
-    --tamanoImagenesSkill: 12vh;
+:root {
+  --colorImpar: rgb(230, 230, 230);
+  --colorImparVfx: rgb(255, 206, 252);
+  --colorImparArts: rgb(252, 187, 187);
+  --colorImparDev: rgb(252, 224, 187);
+  --colorPar: rgb(150, 150, 150);
+  --colorParVfx: rgb(145, 116, 146);
+  --colorParArts: rgb(149, 102, 102);
+  --colorParDev: rgb(149, 140, 102);
+  --generalColor: #009cde;
+  --vfxColor: #ca00de;
+  --artsColor: #de002d;
+  --devColor: #deb100;
+  --bordeGeneral: 5px;
+  --tamanoImagenes: 100%;
+  --tamanoImagenesIn: 100%;
+  --tamanoImagenesSkill: 150px;
 }
 
-                /*Media query desk*/
-@media only screen and (min-width: 768px) {
-/*base para convertir cuadrados en hexagono a futuro*/
-.hexaMain{
-    display:inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+/*Media query desk*/
+@media only screen and (min-width: 481px) {
+  /*base para convertir cuadrados en hexagono a futuro*/
+  .hexaMain {
+    display: flex;
     justify-content: center;
-    width: var(--tamanoImagenes);
-    height: var(--tamanoImagenes);
-    margin: 10px;
     align-items: center;
-    text-align: center;
-    border-radius: 10%;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
-.hexaMain img{
+    align-content: center;
+    width: var(--tamanoImagenes);
+    height: auto;
+  }
+  .hexaMain img {
     width: var(--tamanoImagenesIn);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
-
-.hexaMain h3{
-    display: relative;
-    left: 500px;
+    height: auto;
+  }
+  .hexaMain h3 {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     z-index: 2;
     font-size: 30pt;
-}
-.hexaMain:hover{
-    opacity: 0.8;
-}
-.generalStyleBorder{
+    color: white;
+    text-shadow: 3px 3px 5px black;
+  }
+  .hexaMain p {
+    display: flex;
+    height: var(--tamanoImagenes);
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-size: 5vh;
+    text-align: center;
+  }
+  @keyframes anim{
+    from {
+      opacity: 1;
+    }
+    to{
+      opacity: 0.2;
+    }
+  }
+  .hexaMain:hover {
+    animation-name: anim;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .generalStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: var(--generalColor);
     background-color: var(--generalColor);
-}
-.vfxStyleBorder{
-    border: solid var(--bordeGeneral);
+  }
+  .vfxStyleBorder {
     border-color: var(--vfxColor);
-    background-color: var(--vfxColor);
-}
-.artsStyleBorder{
-    border: solid var(--bordeGeneral);
+    background: rgb(0,156,222);
+    background: linear-gradient(90deg, rgba(0,156,222,1) 0%, rgba(202,0,222,1) 100%);
+  }
+  .artsStyleBorder {
     border-color: var(--artsColor);
-    background-color: var(--artsColor);
-}
-.devStyleBorder{
-    border: solid var(--bordeGeneral);
+    background: rgb(0,156,222);
+    background: linear-gradient(90deg, rgba(0,156,222,1) 0%, rgba(222,0,45,1) 100%);
+  }
+  .devStyleBorder {
     border-color: var(--devColor);
-    background-color: var(--devColor);
-}
-.backStyleBorder{
+    background: rgb(0,156,222);
+    background: linear-gradient(90deg, rgba(0,156,222,1) 0%, rgba(222,177,0,1) 100%);
+  }
+  .backStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: gray;
     background-color: gray;
     opacity: 1;
-}
-.backStyleBorder:hover{
+  }
+  .backStyleBorder:hover {
     border: solid var(--bordeGeneral);
     border-color: gray;
     background-color: gray;
     opacity: 1;
-}
-h1{
+  }
+  h1 {
     font-size: 15vw;
     opacity: 0.3;
-}
-a{
+  }
+  a {
     text-decoration: none;
     color: var(--colorImpar);
     text-shadow: 0px 0px 5px black;
-}
-a:hover{
+  }
+  a:hover {
     color: white;
-    text-shadow: 3px 3px 5px black ;
-}
-/*primero ids y despues clases de cada section*/
-/*Header*/
-header{
-    width: 100vw;
-}
-.logoTop{
+    text-shadow: 3px 3px 5px black;
+  }
+  /*primero ids y despues clases de cada section*/
+  /*Header*/
+  header .cabeza {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .logoTop {
     display: inline-block;
     width: 50px;
-}
-.nav{
-    display: inline-block;
+  }
+  .nav {
+    display: flex;
     position: fixed;
-    top: 8px;
-    right: 16px;
+    top: 15px;
+    right: 15px;
+    align-items: center;
     z-index: 2;
-}
-.nav ul li ul{
+  }
+  .nav ul li ul {
     display: none;
     list-style-type: none;
     top: 8px;
     right: 16px;
-}
-.nav ul li{
+  }
+  .nav ul li {
     list-style-type: none;
-}
-.nav ul li:hover > ul{
-    display: block ;
-}
-/*Home*/
-#Home{
-    background-color: var(--colorImpar);
-    width: 100vw;
-    height: 95vh;
-}
-
-.carruselHome{
-    display: grid;
-    width: 100vw;
-    height: 95vh;
-    grid-template-areas: 
-        "Foto Hexagonos1"
-        "Foto Hexagonos2"
-        "Foto Hexagonos3"
-        "Texto Texto";
-    justify-content: center;
-    align-content: center;
-    overflow: hidden;
-}
-
-.Foto{
-    display: flex;
-    grid-area: Foto;
-    justify-content: center;
-    align-items: center;
-    transform: scale(150%);
-    text-align: center;
-}
-
-.Hexagonos1{
-    display: flex;
-    grid-area: Hexagonos1;
-    justify-content: center;
-    align-items: flex-start;
-    transform: translatey(50%); 
-}
-.Hexagonos1 p{
-    color: lightgray;
-    font-size: 5vh;
-    align-items: flex-start;
-    align-content: flex-start;
-}
-.Hexagonos2{
-    display: flex;
-    grid-area: Hexagonos2;
-    justify-content: center;
-    z-index: 2;
-}
-.Hexagonos3{
-    display: flex;
-    grid-area: Hexagonos3;
-    justify-content: center;
-    transform: translatey(-50%); 
-}
-.Hexagonos3 p{
-    color: lightgray;
-    font-size: 5vh;
-}
-.textoHome{
-    display: flex;
-    align-content: flex-start;
-    grid-area: Texto;
-    transform: translatey(-50%);
-}
-/*HOME arts*/
-.homeClassArts{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--colorImparArts);
-}
-.carruselHomeArts{
-    display: grid;
-    grid-template-areas: "Foto shopPrev"
-                        "Texto Texto";
-    background-color: var(--colorImparArts);
-    height: 100hv;
-    width: 100vw;
-    align-items: center;
-    align-content: space-around;
-    justify-content: space-around;
-}
-.shopPrev{
-    grid-area: shopPrev;
-}
-.textoHomeArts{
-    display: flex;
-    grid-area: Texto;
-}
-/* .carruselHomeArts h1{
-    display: flex;
-    align-items: flex-end;
-} */
-/*About*/
-.aboutClass{
-    background-color: var(--colorPar);
-    display:grid;
-    grid-template-areas: 
-        "fotoAbout Desc"
-        "fotoAbout Desc"
-        "Titulo Titulo";
-    width: 100vw;
-    height: 96vh;
-    padding: 2vh; 
-    overflow: hidden;
-    justify-content: center;
-    align-content: center; 
-}
-.aboutFoto{
-    grid-area: fotoAbout;
-    align-items: center;
-    width: 40vw;
-    height: 40vw;
-    transform: translateY(10%);
-}
-.aboutFoto img{
-    width: 35vw;
-}
-.aboutDesc{
-    grid-area: Desc;
-    align-self: center;
-    padding: 2vw;
-    max-width: 50vw;
-    font-size: 4vh;
-    color: white;
-    transform: translateY(10%);
-}
-.aboutTitle{
-    grid-area: Titulo;
-    transform: translatey(20%);
-}
-/*About Arts*/
-.artsColorPar{
-    background-color: var(--colorParArts);
-}
-.artsColorImpar{
-    background-color: var(--colorImparArts);
-}
-/*skillset*/
-.skillsetClass{
-    background-color: var(--colorImpar);
-    /* background-image: url("./../Assets/Fondo.png"); */
-    /* background-size: cover; */
-    display: flex;
-    width: 98.1vw;
-    height: 95vh;
-    padding: 2%;
-    overflow: hidden;
-}
-.skillsetClassArts{
-    background-color: var(--colorImparArts);
-    /* background-image: url("./../Assets/Fondo.png"); */
-    /* background-size: cover; */
-    display: flex;
-    width: 98.1vw;
-    height: 95vh;
-    padding: 2%;
-    overflow: hidden;
-}
-.groupSkill{
-    display:grid;
-    grid-template-areas: 
-        "generalSkills"
-        "vfxSkills"
-        "artSkills"
-        "devSkills"
-        "Titulo";
-        padding-top: 1%;
-}
-#generalSkills{
-    grid-area: generalSkills;
-    display: flex;
-}
-#generalSkills h3{
-    display: flex;
-    justify-content: center;
-    text-orientation:mixed;
-    writing-mode:vertical-rl;
-}
-#VFX{
-    display: flex;
-    grid-area: vfxSkills;
-}
-#VFX h3{
-    display: flex;
-    justify-content: center;
-    text-orientation:mixed;
-    writing-mode:vertical-rl;
-}
-#Art{
-    display: flex;
-    grid-area: artSkills;
-}
-#Art h3{
-    display: flex;
-    justify-content: center;
-    text-orientation:mixed;
-    writing-mode:vertical-rl;
-}
-#Dev{
-    display: flex;
-    grid-area: devSkills;
-    padding: 10px;
-}
-#Dev h3{
-    display: flex;
-    justify-content: center;
-    writing-mode:vertical-rl;
-}
-.groupSkill h1{
-    grid-area: Titulo;
-    display: flex;
-    position: relative;
-    bottom: -50%; 
-    justify-content: center;
-    text-align: center;
-    align-content: center;
-}
-/*cada hexa de skill*/
-.skillItem{
-    display: inline-flex;
-    width: var(--tamanoImagenesSkill);
-    height: var(--tamanoImagenesSkill);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    align-content: center;
-    align-self: center;
-}
-.skillItem img{
-    display: flex;
-    width: calc(var(--tamanoImagenesSkill));
-    transform: translate(5%,5%);
-}
-.skillDesc{
-    position: absolute;
-    visibility: hidden;
-}
-.skillItem:hover .skillDesc{
-   visibility: visible;
-   z-index: 2;
-}
-/*Projects*/
-#Projects{
-    display: flex;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--colorPar);
-    justify-content: space-around;
-    align-items: center;
-}
-
-.groupProjects{
-    display: inline-flex;
-    justify-content: space-evenly;
-    width: 100vw;
-}
-.projectsClassVfx{
-    position: relative;
-    background-color: var(--colorParVfx);
+  }
+  .nav ul li:hover > ul {
     display: block;
-    width: 100%;
-}
-
-.projectDesc{
-    position: absolute;
-    visibility: hidden;
-    z-index: 2;
-    width: 10%;
-}
-#Projects h1{
-    position: absolute;
-    bottom: -14%;
-    left: 10%;
-}
-
-.projectHov:hover .projectDesc{
-    visibility: visible;
-}
-/*VFX*/
-.projectsClassVfx:hover .projectDesc{
-    visibility: visible;
-}
-.projectsClassVfx:hover h3{
-    visibility: hidden;
-}
-/*Arts*/
-.projectsClassArts:hover .projectDesc{
-    visibility: visible;
-}
-#ProjectsArts h1{
-    position: absolute;
-    bottom: -14%;
-    left: 10%;
-}
-#ProjectsArts{
+  }
+  /*HOME*/
+  .homeClass {
     display: flex;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--colorParArts);
-    justify-content: space-around;
-    align-items: center;
-}
-/*Shop Overview*/
-#fastShop{
-    background-color: var(--colorImparArts);
-    position: relative;
-    height: auto; 
-}
-/*Contact*/
-#Contact{
-    grid-area: Contact;
-    background-color: var(--colorImpar);
-    position: relative;
-    height: auto;
-}
-/*VFX*/
-#ContactVfx{
-    background-color: var(--colorImparVfx);
-    position: relative;
-    height: auto;
-}
-.contactClassVfx{
-    background-color: var(--colorImparVfx);
-    position: relative;
-    height: auto;
-}
-/*Arts*/
-#ContactArts{
-    background-color: var(--colorParArts);
-    position: relative;
-    height: auto;
-}
-.contactClassArts{
-    background-color: var(--colorParArts);
-    position: relative;
-    height: auto;
-}
-/*Dev*/
-#ContactDev{
-    background-color: var(--colorParDev);
-    position: relative;
-    height: auto;
-}
-.contactClassDev{
-    background-color: var(--colorParDev);
-    position: relative;
-    height: auto;
-}
-#contact h1{
-    text-align: center;
-    height: 150px;
-    width: auto;
-    position: absolute;
-    bottom: -350px;
-    overflow: hidden;
-    margin: 0px;
-}
-/*Formato de envio*/
-#contactForm{
-    display: grid;
-    grid-template-areas: "Titulo Titulo"
-                        "Formato Contact";
-    align-content: space-around;
-}
-#contactForm h1{
-    grid-area: Titulo;
-    text-align: center;
-}
-form{
-    grid-area: Formato;
-    align-content: space-around;
+    height: 100%;
+    width: 100%;
     background-color: var(--colorPar);
+  }
+  .carruselHome {
+    display: grid;
+    grid-template-areas:
+      "Titulo Hexa1 Hexa1"
+      "Titulo Hexa2 Hexa2"
+      "Titulo Hexa3 Hexa3";
+    width: 100%;
+    height: 100vh;
+  }
+  .Foto {
+    /* grid-area: Foto; */
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .Hexagonos1 {
+    grid-area: Hexa1;
+    display: flex;
+    flex-flow: row nowrap;
+    width: Auto;
+    height: 100%;
+    justify-content: center;
+  }
+  .Hexagonos2 {
+    grid-area: Hexa2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  .Hexagonos3 {
+    grid-area: Hexa3;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .carruselHome h1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    grid-area: Titulo;
+    font-size: 10rem;
+    align-items: center;
+  }
+  /*ABOUT*/
+  .aboutClass {
+    display: grid;
+    grid-template-areas:
+      "Titulo Foto"
+      "Titulo Desc";
+    height: 100%;
+    height: 100%;
+    background-color: var(--colorImpar);
+  }
+  .aboutFoto {
+    grid-area: Foto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    
-    height: 70vh;
-}
-form label{
+    border: 50px;
+    width: var(--tamanoImagenes);
+    height: var(--tamanoImagenes);
+  }
+  .aboutDesc {
+    grid-area: Desc;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    height: 100%;
+    width: 100%;
+  }
+  .aboutTitle {
+    grid-area: Titulo;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 25rem;
+  }
+  /*SKILLSET*/
+  .skillsetClass {
+    background-color: var(--colorPar);
+    width: 100%;
+    height: 100%;
+  }
+  .groupSkill {
+    display: grid;
+    grid-template-areas:
+      "Titulo genSkills"
+      "Titulo vfxSkills"
+      "Titulo artSkills"
+      "Titulo devSkills";
+    width: 100%;
+    align-content: stretch;
+  }
+  .groupSkill h3 {
+    display: flex;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: white;
+    font-size: 5vh;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  #generalSkills {
+    grid-area: genSkills;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: stretch;
+    width: 100%;
+  }
+  .skillItem {
+    display: flex;
+    height: 20vh;
+    width: auto;
+    padding: 0;
+    align-self: stretch;
+  }
+  .skillDesc {
+    position: absolute;
+    z-index: 2;
+    color: white;
+  }
+  .skillItem img {
+    height: 19vh;
+    width: auto;
+  }
+  #VFX {
+    grid-area: vfxSkills;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-self: stretch;
+  }
+  #Art {
+    grid-area: artSkills;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    align-self: stretch;
+  }
+  #Dev {
+    grid-area: devSkills;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .groupSkill h1 {
+    grid-area: Titulo;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 30vh;
+  }
+  /*PROJECTS*/
+  .projectsClass {
+    display: grid;
+    background-color: var(--colorImpar);
+    grid-template-areas: "Titulo Projects";
+    height: 100%;
+    width: 100%;
+  }
+  .groupProjects {
+    grid-area: Projects;
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-between;
+  }
+  .projectDesc {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+  }
+  .projectsClass h1 {
+    grid-area: Titulo;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 25vh;
+  }
+  /*CONTACT*/
+  #Contact {
+    display: grid;
+    grid-template-areas: "Titulo Links";
+    background-color: var(--colorPar);
+    height: 100vh;
+  }
+  .divContact {
+    grid-area: Links;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .linkBox {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #ContactC {
+    display: grid;
+    grid-template-areas:
+      "Titulo Links"
+      "Titulo Links";
+    background-color: var(--colorPar);
+    height: 100%;
+    width: 100%;
+  }
+  #Contact h1 {
+    grid-area: Titulo;
+    display: flex;
+    /* position: absolute; */
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 28vh;
+  }
+  #ContactC h1 {
+    grid-area: Titulo;
+    display: flex;
+    /* position: absolute; */
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 28vh;
+  }
+  /*CONTACT form*/
+  #contactForm {
+    display: grid;
+    grid-template-areas:
+      "Titulo Formato"
+      "Links Links";
+  }
+  form {
+    background-color: var(--colorPar);
+    display: inline;
+    text-align: center;
+    padding: 15px;
+  }
+  form label {
     padding: 10px;
     margin: 10px;
     color: white;
     width: 100vw;
     font-size: large;
-}
-form input{
+  }
+  form input {
     margin: 10px;
     border-radius: 5px;
     font-size: large;
-}
-form p{
+  }
+  form p {
     margin: 10px;
     padding: 5px;
-}
-form h2{
+  }
+  form h2 {
     color: white;
     padding: 5px;
     background-color: var(--generalColor);
-}
-input[type=submit], input[type=reset] {
+  }
+  input[type="submit"],
+  input[type="reset"] {
     background-color: var(--generalColor);
     font-size: large;
     border: none;
@@ -538,397 +437,368 @@ input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
   }
-input[type=reset]:hover{
-      background-color: white;
-      color: var(--generalColor);
-  }
-input[type=submit]:hover {
+  input[type="reset"]:hover {
     background-color: white;
     color: var(--generalColor);
-}
-select{
+  }
+  input[type="submit"]:hover {
+    background-color: white;
+    color: var(--generalColor);
+  }
+  select {
     border-radius: 5px;
     padding: 5px;
     background-color: var(--colorImpar);
+  }
 }
-form span{
-    color: white;
-}
-.divContact{
-    width: 100%;
-    padding: 35px;
-    position: relative;
-   display: inline-flex;
-   flex-direction:row;
-   flex-wrap: nowrap;
-   justify-content: space-around;
-}
-.linkBox{
-    display: inline-flex;
-    padding: 5px;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.linkBox:hover{
-    opacity: 0.5;
-}
-/*footer*/
-footer{
-    grid-area: footer;
-   text-align: center;
-}
-/*Shop*/
-#bestProducts{
-    background-color: var(--colorImparArts);
-    width: auto;
-    height: 50vh;  
-}
-#productsByShopRb{
-    background-color: var(--colorParArts);
-    width: auto;
-    height: auto;  
-}
-#productsByShopS6{
-    background-color: var(--colorImparArts);
-    width: auto;
-    height: auto;  
-}
-}
-                /*MOBILE*/
-@media only screen and (max-width:480px) {
-    /*Header*/
-header{
-    width: 100vw;
-}
-.logoTop{
-    display: inline-block;
-    width: 40px;
-}
-.nav{
-    display: inline-block;
-    position: fixed;
-    top: 8px;
-    right: 16px;
+/*MOBILE*/
+@media only screen and (max-width: 480px) {
+  .hexaMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: var(--tamanoImagenes);
+    height: auto;
+    border-radius: 5px;
+  }
+  .hexaMain img {
+    width: var(--tamanoImagenesIn);
+    height: auto;
+  }
+  .hexaMain h3 {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     z-index: 2;
-}
-.nav ul li ul{
-    display: none;
-    list-style-type: none;
-    top: 8px;
-    right: 16px;
-}
-.nav ul li{
-    list-style-type: none;
-}
-.nav ul li:hover > ul{
-    display: block ;
-}
-h1{
-    font-size: 18vw;
-    opacity: 0.3;
-}
-/*colores*/
-.generalStyleBorder{
+    font-size: 30pt;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+  }
+  .hexaMain p {
+    display: flex;
+    height: var(--tamanoImagenes);
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-size: 5vh;
+    text-align: center;
+  }
+  .hexaMain:hover {
+    opacity: 0.8;
+  }
+  .generalStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: var(--generalColor);
     background-color: var(--generalColor);
-}
-.vfxStyleBorder{
+  }
+  .vfxStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: var(--vfxColor);
     background-color: var(--vfxColor);
-}
-.artsStyleBorder{
+  }
+  .artsStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: var(--artsColor);
     background-color: var(--artsColor);
-}
-.devStyleBorder{
+  }
+  .devStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: var(--devColor);
     background-color: var(--devColor);
-}
-.backStyleBorder{
+  }
+  .backStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: gray;
     background-color: gray;
     opacity: 1;
-}
-/*links sin color*/
-a{
+  }
+  .backStyleBorder:hover {
+    border: solid var(--bordeGeneral);
+    border-color: gray;
+    background-color: gray;
+    opacity: 1;
+  }
+  h1 {
+    font-size: 15vw;
+    opacity: 0.3;
+  }
+  a {
     text-decoration: none;
     color: var(--colorImpar);
     text-shadow: 0px 0px 5px black;
-}
-a:hover{
+  }
+  a:hover {
     color: white;
-    text-shadow: 3px 3px 5px black ;
-}
-/*hexagonos pequeños*/
-.hexaMain{
-    display:inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: calc(var(--tamanoImagenes)/2);
-    height: calc(var(--tamanoImagenes)/2);
-    margin: 0px;
-    scale: 10%;
-    align-items: center;
-    text-align: center;
-    border-radius: 10%;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
-.hexaMain img{
-    width: calc(var(--tamanoImagenesIn)/2);
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
-
-.hexaMain h3{
-    display: relative;
-    left: 500px;
+    text-shadow: 3px 3px 5px black;
+  }
+  /*primero ids y despues clases de cada section*/
+  /*Header*/
+  header .cabeza {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .logoTop {
+    display: inline-block;
+    width: 40px;
+  }
+  .nav {
+    display: flex;
+    position: fixed;
+    left: 80%;
+    top: 10px;
+    justify-content: flex-end;
     z-index: 2;
-    font-size: 10pt;
-    color: white;
-    
-}
-.hexaMain:hover{
-    opacity: 0.8;
-}
-.backStyleBorder{
+  }
+  .nav ul li ul {
     display: none;
-}
-/*HOME*/
-#Home{
+    list-style-type: none;
+    top: 8px;
+    right: 16px;
+  }
+  .nav ul li {
+    list-style-type: none;
+  }
+  .nav ul li:hover > ul {
+    display: block;
+  }
+  /*HOME*/
+  .homeClass {
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--colorImpar);
-}
-.carruselHome{
-    display: grid;
-    grid-template-areas: "Foto Hexagonos2"
-                        "text text";
-    height: 100hv;
-    padding: 10px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: space-around;
-}
-.Foto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: Foto;
-    padding: 10px;
-}
-.Hexagonos2{
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: space-around;
-    grid-area: Hexagonos2;
-    padding: 10px;
-    height: 80vh;
-}
-.textoHome{
-    display: flex;
-    align-items: flex-end;
-    grid-area: text;
-}
-/*ABOUT*/
-#About{
-    display: grid;
-    grid-template-areas: "Foto"
-                        "Desc"
-                        "Titulo";
+    height: 100%;
+    width: 100%;
     background-color: var(--colorPar);
-    height: 100vh;
-    padding: 10px;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-}
-.aboutFoto{
-    display: flex;
-    position: relative;
-    grid-area: Foto;
-    transform: scale(1.5);
-    left: 25%;
-    top: 25%;
-}
-.aboutDesc{
-    display: flex;
-    grid-area: Desc;
-    font-size: x-large;
-    color: white;
-    height: 70vh;
-    align-items: center;
-}
-.aboutTitle{
-    display: flex;
-    position: relative;
-    height: 5vh;
-    grid-area: Titulo;
-    bottom: 30%;
-    font-size: 37vw;
-}
-/*SKILLSET*/
-.groupSkill{
+  }
+  .carruselHome {
     display: grid;
-    grid-template-areas:"Titulo" 
-                        "generalSkills"
-                        "vfxSkills"
-                        "artSkills"
-                        "devSkills";
-    background-color: var(--colorImpar);
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    overflow: hidden;
-}
-.generalSkills{
-    grid-area: generalSkills;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
-.groupSkill h3{
-    display: flex;
-    justify-content: center;
-    font-size: xx-large;
-}
-.VFX{
-    grid-area: vfxSkills;
-}
-.Art{
-    grid-area: artSkills;
-}
-.groupSkill h1{
-    grid-area: Titulo;
-    font-size: 30vw;
-    position: relative;
-    top: -170%;
-    height: 5vh;
-}
-.skillItem{
-    transform: scale(0.9);
-    padding: 0;
-}
-.skillItem a{
-    position: absolute;
-    z-index: 2;
-}
-/*PROJECTS*/
-#Projects{
-    display: flex;
-    flex-direction: column;
+    grid-template-areas:
+      "Titulo"
+      "Hexa2";
+    width: 100%;
     height: 100vh;
-    background-color: var(--colorPar);
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-}
-.groupProjects{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    height: 90vh;
-}
-.projectDesc{
-    position: absolute;
-    width: 20vw;
-}
-#Projects h1{
-    font-size: 28vw;
-    position: relative;
-    height: 5vh;
-    bottom: 2.5%;
-}
-.projectHov{
-    transform: scale(1.4);
-}
-/*CONTACT*/
-#Contact{
-    grid-area: General;
-    height: 100vh;
-    background-color: var(--colorImpar);
-    overflow: hidden;
-}
-.divContact{
-    display: flex;
-    height: 90vh;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-}
-.divContact a{
-    text-align: center;
-}
-.divContact svg{
-    width: 40vw;
-}
-#Contact h1{
-    font-size: 28vw;
-    position: relative;
-    height: 5vh;
-    bottom: -1%;
-}
-footer{
+  }
+  .Foto {
     display: none;
-}
-/*CONTACT FORM*/
-#contactForm{
+    justify-content: center;
+    max-width: 30%;
+  }
+  .Hexagonos1 {
+    grid-area: Hexa1;
+    display: none;
+    flex-flow: row nowrap;
+    width: Auto;
+    height: 100%;
+    justify-content: center;
+    visibility: hidden;
+  }
+  .Hexagonos2 {
+    grid-area: Hexa2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  .Hexagonos3 {
+    grid-area: Hexa3;
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: center;
+    visibility: hidden;
+  }
+  .carruselHome h1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    grid-area: Titulo;
+    font-size: 5rem;
+    align-items: center;
+  }
+  /*ABOUT*/
+  #About {
     display: grid;
-    grid-template-areas:"Titulo"
-                        "Formato"
-                        "General";
+    grid-template-areas:
+      "Titulo"
+      "Foto"
+      "Desc";
+    background-color: var(--colorImpar);
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutFoto {
+    grid-area: Foto;
+    display: flex;
+    width: 50%;
     height: auto;
-    align-content:center;
     justify-content: center;
+    align-items: center;
+    justify-self: center;
+  }
+  .aboutDesc {
+    grid-area: Desc;
+    margin: 5%;
+  }
+  .aboutTitle {
+    grid-area: Titulo;
+  }
+  /*SKILLSET*/
+  #Skillset {
     background-color: var(--colorPar);
-}
-#contactForm h1{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .groupSkill {
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "genSki"
+      "vfxSki"
+      "artSki"
+      "devSki";
+    align-items: stretch;
+    justify-content: center;
+  }
+  #generalSkills {
+    grid-area: genSki;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .groupSkill h3 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: white;
+  }
+  #VFX {
+    grid-area: vfxSki;
+    display: flex;
+  }
+  #Art {
+    grid-area: artSki;
+    display: flex;
+  }
+  #Dev {
+    grid-area: devSki;
+    display: flex;
+  }
+  .groupSkill h1 {
+    grid-area: Titulo;
+  }
+  .skillItem {
+    width: 20%;
+  }
+  .skillDesc {
+    position: absolute;
+    text-align: center;
+    font-size: x-small;
+  }
+  /*PROJECTS*/
+  #Projects {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "Proj";
+    background-color: var(--colorImpar);
+  }
+  .groupProjects {
+    grid-area: Proj;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectHov {
+    width: 100%;
+  }
+  .projectDesc {
+    position: absolute;
+  }
+  /*CONTACT*/
+  #Contact {
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "Contact";
+    background-color: var(--colorPar);
+    justify-content: space-around;
+  }
+  #ContactC {
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "Contact";
+    background-color: var(--colorPar);
+    height: 100%;
+    width: 100%;
+  }
+  .divContact {
+    grid-area: Contact;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .divContact h3 {
+    text-align: center;
+  }
+  #Contact h1 {
+    grid-area: Titulo;
+  }
+  #ContactC h1 {
     grid-area: Titulo;
     display: flex;
+    /* position: absolute; */
     justify-content: center;
-}
-form{
-    grid-area: Formato;
+    /* writing-mode: vertical-rl;
+    text-orientation:mixed; */
+    font-size: 10vh;
+  }
+  footer {
+    display: none;
+  }
+  /*CONTACT Form*/
+  #contactForm {
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "Formato"
+      "Links";
+  }
+  form {
     background-color: var(--colorPar);
+    display: inline;
     text-align: center;
-    padding: 10px;
-}
-form label{
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: large;
-}
-form input{
+    padding: 15px;
+  }
+  form label {
+    padding: 5px;
     margin: 5px;
+    color: white;
+    width: 100%;
+    font-size: large;
+  }
+  form input {
+    margin: 10px;
     border-radius: 5px;
     font-size: large;
-}
-form p{
-    margin: 10px;
+  }
+  form p {
+    margin: 5px;
     padding: 5px;
-}
-form h2{
+  }
+  form h2 {
     color: white;
     padding: 5px;
     background-color: var(--generalColor);
-}
-form span{
-    color: white;
-    padding-top: 5vh;
-}
-input[type=submit], input[type=reset] {
+  }
+  input[type="submit"],
+  input[type="reset"] {
     background-color: var(--generalColor);
     font-size: large;
     border: none;
@@ -938,17 +808,20 @@ input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
   }
-input[type=reset]:hover{
-      background-color: white;
-      color: var(--generalColor);
-  }
-input[type=submit]:hover {
+  input[type="reset"]:hover {
     background-color: white;
     color: var(--generalColor);
-}
-select{
+  }
+  input[type="submit"]:hover {
+    background-color: white;
+    color: var(--generalColor);
+  }
+  #contactReason {
+    width: 90%;
+  }
+  select {
     border-radius: 5px;
     padding: 5px;
     background-color: var(--colorImpar);
-}
+  }
 }
