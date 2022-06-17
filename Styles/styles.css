@@ -1,45 +1,45 @@
 /*truco para que el fondo de cada section llegue hasta el final*/
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 /*colores por categoria y estilos para reutilizar*/
-:root{
-    --colorImpar: rgb(230, 230, 230);
-    --colorImparVfx: rgb(255, 206, 252);
-    --colorImparArts: rgb(252, 187, 187);
-    --colorImparDev: rgb(252, 224, 187);
-    --colorPar: rgb(150,150,150);
-    --colorParVfx: rgb(145, 116, 146);
-    --colorParArts: rgb(149, 102, 102);
-    --colorParDev: rgb(149, 140, 102);
-    --generalColor: #009CDE; 
-    --vfxColor: #CA00DE;
-    --artsColor: #DE002D;
-    --devColor: #DEB100;
-    --bordeGeneral: 5px;
-    --tamanoImagenes: 100%;
-    --tamanoImagenesIn: 100%;
-    --tamanoImagenesSkill: 150px;
+:root {
+  --colorImpar: rgb(230, 230, 230);
+  --colorImparVfx: rgb(255, 206, 252);
+  --colorImparArts: rgb(252, 187, 187);
+  --colorImparDev: rgb(252, 224, 187);
+  --colorPar: rgb(150, 150, 150);
+  --colorParVfx: rgb(145, 116, 146);
+  --colorParArts: rgb(149, 102, 102);
+  --colorParDev: rgb(149, 140, 102);
+  --generalColor: #009cde;
+  --vfxColor: #ca00de;
+  --artsColor: #de002d;
+  --devColor: #deb100;
+  --bordeGeneral: 5px;
+  --tamanoImagenes: 100%;
+  --tamanoImagenesIn: 100%;
+  --tamanoImagenesSkill: 150px;
 }
 
-                /*Media query desk*/
+/*Media query desk*/
 @media only screen and (min-width: 481px) {
-/*base para convertir cuadrados en hexagono a futuro*/
-.hexaMain{
+  /*base para convertir cuadrados en hexagono a futuro*/
+  .hexaMain {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     width: var(--tamanoImagenes);
     height: auto;
-}
-.hexaMain img{
+  }
+  .hexaMain img {
     width: var(--tamanoImagenesIn);
     height: auto;
-}
-.hexaMain h3{
+  }
+  .hexaMain h3 {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -48,9 +48,9 @@
     z-index: 2;
     font-size: 30pt;
     color: white;
-    text-shadow: 3px 3px 5px black ;
-}
-.hexaMain p{
+    text-shadow: 3px 3px 5px black;
+  }
+  .hexaMain p {
     display: flex;
     height: var(--tamanoImagenes);
     align-items: center;
@@ -58,149 +58,149 @@
     color: white;
     font-size: 5vh;
     text-align: center;
-}
-.hexaMain:hover{
+  }
+  .hexaMain:hover {
     opacity: 0.8;
-}
-.generalStyleBorder{
+  }
+  .generalStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: var(--generalColor);
     background-color: var(--generalColor);
-}
-.vfxStyleBorder{
+  }
+  .vfxStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: var(--vfxColor);
     background-color: var(--vfxColor);
-}
-.artsStyleBorder{
+  }
+  .artsStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: var(--artsColor);
     background-color: var(--artsColor);
-}
-.devStyleBorder{
+  }
+  .devStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: var(--devColor);
     background-color: var(--devColor);
-}
-.backStyleBorder{
+  }
+  .backStyleBorder {
     border: solid var(--bordeGeneral);
     border-color: gray;
     background-color: gray;
     opacity: 1;
-}
-.backStyleBorder:hover{
+  }
+  .backStyleBorder:hover {
     border: solid var(--bordeGeneral);
     border-color: gray;
     background-color: gray;
     opacity: 1;
-}
-h1{
+  }
+  h1 {
     font-size: 15vw;
     opacity: 0.3;
-}
-a{
+  }
+  a {
     text-decoration: none;
     color: var(--colorImpar);
     text-shadow: 0px 0px 5px black;
-}
-a:hover{
+  }
+  a:hover {
     color: white;
-    text-shadow: 3px 3px 5px black ;
-}
-/*primero ids y despues clases de cada section*/
-/*Header*/
-header .cabeza{
+    text-shadow: 3px 3px 5px black;
+  }
+  /*primero ids y despues clases de cada section*/
+  /*Header*/
+  header .cabeza {
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-.logoTop{
+  }
+  .logoTop {
     display: inline-block;
     width: 50px;
-}
-.nav{
+  }
+  .nav {
     display: flex;
     position: fixed;
     top: 15px;
     right: 15px;
     align-items: center;
     z-index: 2;
-}
-.nav ul li ul{
+  }
+  .nav ul li ul {
     display: none;
     list-style-type: none;
     top: 8px;
     right: 16px;
-}
-.nav ul li{
+  }
+  .nav ul li {
     list-style-type: none;
-}
-.nav ul li:hover > ul{
-    display: block ;
-}
-/*HOME*/
-.homeClass{
+  }
+  .nav ul li:hover > ul {
+    display: block;
+  }
+  /*HOME*/
+  .homeClass {
     display: flex;
     height: 100%;
     width: 100%;
     background-color: var(--colorPar);
-}
-.carruselHome{
+  }
+  .carruselHome {
     display: grid;
     grid-template-areas:
-    "Titulo Hexa1 Hexa1"
-    "Titulo Hexa2 Hexa2"
-    "Titulo Hexa3 Hexa3";
+      "Titulo Hexa1 Hexa1"
+      "Titulo Hexa2 Hexa2"
+      "Titulo Hexa3 Hexa3";
     width: 100%;
     height: 100vh;
-}
-.Foto{
+  }
+  .Foto {
     /* grid-area: Foto; */
     display: flex;
     justify-content: center;
     max-width: 100%;
-}
-.Hexagonos1{
+  }
+  .Hexagonos1 {
     grid-area: Hexa1;
     display: flex;
     flex-flow: row nowrap;
     width: Auto;
     height: 100%;
     justify-content: center;
-}
-.Hexagonos2{
+  }
+  .Hexagonos2 {
     grid-area: Hexa2;
     height: 100%;
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-}
-.Hexagonos3{
+  }
+  .Hexagonos3 {
     grid-area: Hexa3;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-}
-.carruselHome h1{
+  }
+  .carruselHome h1 {
     display: flex;
     width: 100%;
     height: 100%;
     grid-area: Titulo;
     font-size: 10rem;
     align-items: center;
-}
-/*ABOUT*/
-.aboutClass{
+  }
+  /*ABOUT*/
+  .aboutClass {
     display: grid;
-    grid-template-areas: 
-    "Titulo Foto"
-    "Titulo Desc";
+    grid-template-areas:
+      "Titulo Foto"
+      "Titulo Desc";
     height: 100%;
     height: 100%;
     background-color: var(--colorImpar);
-}
-.aboutFoto{
+  }
+  .aboutFoto {
     grid-area: Foto;
     display: flex;
     justify-content: center;
@@ -209,138 +209,135 @@ header .cabeza{
     border: 50px;
     width: var(--tamanoImagenes);
     height: var(--tamanoImagenes);
-}
-.aboutDesc{
+  }
+  .aboutDesc {
     grid-area: Desc;
     display: flex;
     justify-content: center;
     font-size: 2rem;
     height: 100%;
     width: 100%;
-}
-.aboutTitle{
+  }
+  .aboutTitle {
     grid-area: Titulo;
     writing-mode: vertical-rl;
-    text-orientation:mixed;
+    text-orientation: mixed;
     font-size: 25rem;
-}
-/*SKILLSET*/
-.skillsetClass{
+  }
+  /*SKILLSET*/
+  .skillsetClass {
     background-color: var(--colorPar);
     width: 100%;
     height: 100%;
-}
-.groupSkill{
+  }
+  .groupSkill {
     display: grid;
-    grid-template-areas: 
-    "Titulo genSkills"
-    "Titulo vfxSkills"
-    "Titulo artSkills"
-    "Titulo devSkills";
+    grid-template-areas:
+      "Titulo genSkills"
+      "Titulo vfxSkills"
+      "Titulo artSkills"
+      "Titulo devSkills";
     width: 100%;
     align-content: stretch;
-}
-.groupSkill h3{
+  }
+  .groupSkill h3 {
     display: flex;
     writing-mode: vertical-rl;
-    text-orientation:mixed;
+    text-orientation: mixed;
     color: white;
     font-size: 5vh;
     align-items: center;
     justify-content: center;
     align-content: center;
-}
-#generalSkills{
+  }
+  #generalSkills {
     grid-area: genSkills;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: stretch;
     width: 100%;
-}
-.skillItem{
+  }
+  .skillItem {
     display: flex;
     height: 20vh;
     width: auto;
     padding: 0;
     align-self: stretch;
-}
-.skillDesc{
+  }
+  .skillDesc {
     position: absolute;
     z-index: 2;
     color: white;
-}
-.skillItem img{
+  }
+  .skillItem img {
     height: 19vh;
     width: auto;
-}
-#VFX{
+  }
+  #VFX {
     grid-area: vfxSkills;
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-self: stretch;
-}
-#Art{
+  }
+  #Art {
     grid-area: artSkills;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: stretch;
     align-self: stretch;
-}
-#Dev{
+  }
+  #Dev {
     grid-area: devSkills;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-}
-.groupSkill h1{
+  }
+  .groupSkill h1 {
     grid-area: Titulo;
     writing-mode: vertical-rl;
-    text-orientation:mixed;
+    text-orientation: mixed;
     font-size: 30vh;
-}
-/*PROJECTS*/
-.projectsClass{
+  }
+  /*PROJECTS*/
+  .projectsClass {
     display: grid;
     background-color: var(--colorImpar);
-    grid-template-areas: 
-    "Titulo Projects";
+    grid-template-areas: "Titulo Projects";
     height: 100%;
     width: 100%;
-}
-.groupProjects{
+  }
+  .groupProjects {
     grid-area: Projects;
     display: flex;
     flex-direction: row;
     align-content: stretch;
     justify-content: space-between;
-
-}
-.projectDesc{
+  }
+  .projectDesc {
     display: flex;
     position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 10vw;
-}
-.projectsClass h1{
+  }
+  .projectsClass h1 {
     grid-area: Titulo;
     writing-mode: vertical-rl;
-    text-orientation:mixed;
+    text-orientation: mixed;
     font-size: 25vh;
-}
-/*CONTACT*/
-#Contact{
+  }
+  /*CONTACT*/
+  #Contact {
     display: grid;
-    grid-template-areas: 
-    "Titulo Links";
+    grid-template-areas: "Titulo Links";
     background-color: var(--colorPar);
     height: 100vh;
-}
-.divContact{
+  }
+  .divContact {
     grid-area: Links;
     display: flex;
     justify-content: space-around;
@@ -349,76 +346,77 @@ header .cabeza{
     align-self: center;
     align-content: center;
     flex-wrap: wrap;
-}
-.linkBox{
+  }
+  .linkBox {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-#ContactC{
+  }
+  #ContactC {
     display: grid;
-    grid-template-areas: 
-    "Titulo Links"
-    "Titulo Links";
+    grid-template-areas:
+      "Titulo Links"
+      "Titulo Links";
     background-color: var(--colorPar);
     height: 100%;
     width: 100%;
-}
-#Contact h1{
+  }
+  #Contact h1 {
     grid-area: Titulo;
     display: flex;
     /* position: absolute; */
     justify-content: center;
     writing-mode: vertical-rl;
-    text-orientation:mixed;
+    text-orientation: mixed;
     font-size: 28vh;
-}
-#ContactC h1{
+  }
+  #ContactC h1 {
     grid-area: Titulo;
     display: flex;
     /* position: absolute; */
     justify-content: center;
     writing-mode: vertical-rl;
-    text-orientation:mixed;
+    text-orientation: mixed;
     font-size: 28vh;
-}
-/*CONTACT form*/
-#contactForm{
+  }
+  /*CONTACT form*/
+  #contactForm {
     display: grid;
-    grid-template-areas: 
-    "Titulo Formato"
-    "Links Links";
-}
-form{
+    grid-template-areas:
+      "Titulo Formato"
+      "Links Links";
+  }
+  form {
     background-color: var(--colorPar);
     display: inline;
     text-align: center;
     padding: 15px;
-}
-form label{
+  }
+  form label {
     padding: 10px;
     margin: 10px;
     color: white;
     width: 100vw;
     font-size: large;
-}
-form input{
+  }
+  form input {
     margin: 10px;
     border-radius: 5px;
     font-size: large;
-}
-form p{
+  }
+  form p {
     margin: 10px;
     padding: 5px;
-}
-form h2{
+  }
+  form h2 {
     color: white;
     padding: 5px;
     background-color: var(--generalColor);
-}
-input[type=submit], input[type=reset] {
+  }
+  input[type="submit"],
+  input[type="reset"] {
     background-color: var(--generalColor);
     font-size: large;
     border: none;
@@ -428,200 +426,200 @@ input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
   }
-input[type=reset]:hover{
-      background-color: white;
-      color: var(--generalColor);
-  }
-input[type=submit]:hover {
+  input[type="reset"]:hover {
     background-color: white;
     color: var(--generalColor);
-}
-select{
+  }
+  input[type="submit"]:hover {
+    background-color: white;
+    color: var(--generalColor);
+  }
+  select {
     border-radius: 5px;
     padding: 5px;
     background-color: var(--colorImpar);
+  }
 }
-}
-                /*MOBILE*/
-@media only screen and (max-width:480px) {
-    .hexaMain{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        width: var(--tamanoImagenes);
-        height: auto;
-        border-radius: 5px;
-    }
-    .hexaMain img{
-        width: var(--tamanoImagenesIn);
-        height: auto;
-    }
-    .hexaMain h3{
-        display: flex;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        z-index: 2;
-        font-size: 30pt;
-        color: white;
-        text-shadow: 3px 3px 5px black ;
-    }
-    .hexaMain p{
-        display: flex;
-        height: var(--tamanoImagenes);
-        align-items: center;
-        align-content: center;
-        color: white;
-        font-size: 5vh;
-        text-align: center;
-    }
-    .hexaMain:hover{
-        opacity: 0.8;
-    }
-    .generalStyleBorder{
-        border: solid var(--bordeGeneral);
-        border-color: var(--generalColor);
-        background-color: var(--generalColor);
-    }
-    .vfxStyleBorder{
-        border: solid var(--bordeGeneral);
-        border-color: var(--vfxColor);
-        background-color: var(--vfxColor);
-    }
-    .artsStyleBorder{
-        border: solid var(--bordeGeneral);
-        border-color: var(--artsColor);
-        background-color: var(--artsColor);
-    }
-    .devStyleBorder{
-        border: solid var(--bordeGeneral);
-        border-color: var(--devColor);
-        background-color: var(--devColor);
-    }
-    .backStyleBorder{
-        border: solid var(--bordeGeneral);
-        border-color: gray;
-        background-color: gray;
-        opacity: 1;
-    }
-    .backStyleBorder:hover{
-        border: solid var(--bordeGeneral);
-        border-color: gray;
-        background-color: gray;
-        opacity: 1;
-    }
-    h1{
-        font-size: 15vw;
-        opacity: 0.3;
-    }
-    a{
-        text-decoration: none;
-        color: var(--colorImpar);
-        text-shadow: 0px 0px 5px black;
-    }
-    a:hover{
-        color: white;
-        text-shadow: 3px 3px 5px black ;
-    }
-    /*primero ids y despues clases de cada section*/
-    /*Header*/
-    header .cabeza{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .logoTop{
-        display: inline-block;
-        width: 40px;
-    }
-    .nav{
-        display: flex;
-        position: fixed;
-        left:80%;
-        top: 10px;
-        justify-content: flex-end;
-        z-index: 2;
-    }
-    .nav ul li ul{
-        display: none;
-        list-style-type: none;
-        top: 8px;
-        right: 16px;
-    }
-    .nav ul li{
-        list-style-type: none;
-    }
-    .nav ul li:hover > ul{
-        display: block ;
-    }
-    /*HOME*/
-    .homeClass{
-        display: flex;
-        height: 100%;
-        width: 100%;
-        background-color: var(--colorPar);
-    }
-    .carruselHome{
-        display: grid;
-        grid-template-areas:
-        "Titulo"
-        "Hexa2";
-        width: 100%;
-        height: 100vh;
-    }
-    .Foto{
-        display: none;
-        justify-content: center;
-        max-width: 30%;
-    }
-    .Hexagonos1{
-        grid-area: Hexa1;
-        display: none;
-        flex-flow: row nowrap;
-        width: Auto;
-        height: 100%;
-        justify-content: center;
-        visibility: hidden;
-    }
-    .Hexagonos2{
-        grid-area: Hexa2;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-    }
-    .Hexagonos3{
-        grid-area: Hexa3;
-        display: none;
-        flex-flow: row nowrap;
-        justify-content: center;
-        visibility: hidden;
-    }
-    .carruselHome h1{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        grid-area: Titulo;
-        font-size: 5rem;
-        align-items: center;
-    }
-    /*ABOUT*/
-   #About{
+/*MOBILE*/
+@media only screen and (max-width: 480px) {
+  .hexaMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: var(--tamanoImagenes);
+    height: auto;
+    border-radius: 5px;
+  }
+  .hexaMain img {
+    width: var(--tamanoImagenesIn);
+    height: auto;
+  }
+  .hexaMain h3 {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 2;
+    font-size: 30pt;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+  }
+  .hexaMain p {
+    display: flex;
+    height: var(--tamanoImagenes);
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-size: 5vh;
+    text-align: center;
+  }
+  .hexaMain:hover {
+    opacity: 0.8;
+  }
+  .generalStyleBorder {
+    border: solid var(--bordeGeneral);
+    border-color: var(--generalColor);
+    background-color: var(--generalColor);
+  }
+  .vfxStyleBorder {
+    border: solid var(--bordeGeneral);
+    border-color: var(--vfxColor);
+    background-color: var(--vfxColor);
+  }
+  .artsStyleBorder {
+    border: solid var(--bordeGeneral);
+    border-color: var(--artsColor);
+    background-color: var(--artsColor);
+  }
+  .devStyleBorder {
+    border: solid var(--bordeGeneral);
+    border-color: var(--devColor);
+    background-color: var(--devColor);
+  }
+  .backStyleBorder {
+    border: solid var(--bordeGeneral);
+    border-color: gray;
+    background-color: gray;
+    opacity: 1;
+  }
+  .backStyleBorder:hover {
+    border: solid var(--bordeGeneral);
+    border-color: gray;
+    background-color: gray;
+    opacity: 1;
+  }
+  h1 {
+    font-size: 15vw;
+    opacity: 0.3;
+  }
+  a {
+    text-decoration: none;
+    color: var(--colorImpar);
+    text-shadow: 0px 0px 5px black;
+  }
+  a:hover {
+    color: white;
+    text-shadow: 3px 3px 5px black;
+  }
+  /*primero ids y despues clases de cada section*/
+  /*Header*/
+  header .cabeza {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .logoTop {
+    display: inline-block;
+    width: 40px;
+  }
+  .nav {
+    display: flex;
+    position: fixed;
+    left: 80%;
+    top: 10px;
+    justify-content: flex-end;
+    z-index: 2;
+  }
+  .nav ul li ul {
+    display: none;
+    list-style-type: none;
+    top: 8px;
+    right: 16px;
+  }
+  .nav ul li {
+    list-style-type: none;
+  }
+  .nav ul li:hover > ul {
+    display: block;
+  }
+  /*HOME*/
+  .homeClass {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: var(--colorPar);
+  }
+  .carruselHome {
     display: grid;
-    grid-template-areas: 
-    "Titulo"
-    "Foto"
-    "Desc";
+    grid-template-areas:
+      "Titulo"
+      "Hexa2";
+    width: 100%;
+    height: 100vh;
+  }
+  .Foto {
+    display: none;
+    justify-content: center;
+    max-width: 30%;
+  }
+  .Hexagonos1 {
+    grid-area: Hexa1;
+    display: none;
+    flex-flow: row nowrap;
+    width: Auto;
+    height: 100%;
+    justify-content: center;
+    visibility: hidden;
+  }
+  .Hexagonos2 {
+    grid-area: Hexa2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  .Hexagonos3 {
+    grid-area: Hexa3;
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: center;
+    visibility: hidden;
+  }
+  .carruselHome h1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    grid-area: Titulo;
+    font-size: 5rem;
+    align-items: center;
+  }
+  /*ABOUT*/
+  #About {
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "Foto"
+      "Desc";
     background-color: var(--colorImpar);
     height: 100%;
     justify-content: center;
     align-items: center;
-   }
-   .aboutFoto{
+  }
+  .aboutFoto {
     grid-area: Foto;
     display: flex;
     width: 50%;
@@ -629,189 +627,190 @@ select{
     justify-content: center;
     align-items: center;
     justify-self: center;
-   }
-   .aboutDesc{
+  }
+  .aboutDesc {
     grid-area: Desc;
     margin: 5%;
-   }
-   .aboutTitle{
+  }
+  .aboutTitle {
     grid-area: Titulo;
-   }
-    /*SKILLSET*/
-    #Skillset{
-        background-color: var(--colorPar);
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-    }
-    .groupSkill{
-        display: grid;
-        grid-template-areas: 
-        "Titulo"
-        "genSki"
-        "vfxSki"
-        "artSki"
-        "devSki";
-        align-items: stretch;
-        justify-content: center;
-    }
-    #generalSkills{
-        grid-area: genSki;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .groupSkill h3{
-        writing-mode: vertical-rl;
-        text-orientation:mixed;
-        color: white;
-    }
-    #VFX{
-        grid-area: vfxSki;
-        display: flex;
-    }
-    #Art{
-        grid-area: artSki;
-        display: flex;
-    }
-    #Dev{
-        grid-area: devSki;
-        display: flex;
-    }
-    .groupSkill h1{
-        grid-area: Titulo;
-    }
-    .skillItem{
-        width: 20%;
-    }
-    .skillDesc{
-        position: absolute;
-        text-align: center;
-        font-size: x-small;
-    }
-    /*PROJECTS*/
-    #Projects{
-        height: 100%;
-        width: 100%;
-        display: grid;
-        grid-template-areas: 
-        "Titulo"
-        "Proj";
-        background-color: var(--colorImpar);
-    }
-    .groupProjects{
-        grid-area: Proj;
-        display: flex;
-        flex-direction: column;
-    }
-    .projectHov{
-        width: 100%;
-    }
-    .projectDesc{
-        position: absolute;
-    }
-    /*CONTACT*/
-    #Contact{
-        height: 100%;
-        display: grid;
-        grid-template-areas: 
-        "Titulo"
-        "Contact";
-        background-color: var(--colorPar);
-        justify-content: space-around;
-    }
-    #ContactC{
-        display: grid;
-        grid-template-areas: 
-        "Titulo"
-        "Contact";
-        background-color: var(--colorPar);
-        height: 100%;
-        width: 100%;
-    }
-    .divContact{
-        grid-area: Contact;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 100%;
-    }
-    .divContact h3{
-        text-align: center;
-    }
-    #Contact h1{
-        grid-area: Titulo;
-    }
-    #ContactC h1{
-        grid-area: Titulo;
-        display: flex;
+  }
+  /*SKILLSET*/
+  #Skillset {
+    background-color: var(--colorPar);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .groupSkill {
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "genSki"
+      "vfxSki"
+      "artSki"
+      "devSki";
+    align-items: stretch;
+    justify-content: center;
+  }
+  #generalSkills {
+    grid-area: genSki;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .groupSkill h3 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: white;
+  }
+  #VFX {
+    grid-area: vfxSki;
+    display: flex;
+  }
+  #Art {
+    grid-area: artSki;
+    display: flex;
+  }
+  #Dev {
+    grid-area: devSki;
+    display: flex;
+  }
+  .groupSkill h1 {
+    grid-area: Titulo;
+  }
+  .skillItem {
+    width: 20%;
+  }
+  .skillDesc {
+    position: absolute;
+    text-align: center;
+    font-size: x-small;
+  }
+  /*PROJECTS*/
+  #Projects {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "Proj";
+    background-color: var(--colorImpar);
+  }
+  .groupProjects {
+    grid-area: Proj;
+    display: flex;
+    flex-direction: column;
+  }
+  .projectHov {
+    width: 100%;
+  }
+  .projectDesc {
+    position: absolute;
+  }
+  /*CONTACT*/
+  #Contact {
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "Contact";
+    background-color: var(--colorPar);
+    justify-content: space-around;
+  }
+  #ContactC {
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "Contact";
+    background-color: var(--colorPar);
+    height: 100%;
+    width: 100%;
+  }
+  .divContact {
+    grid-area: Contact;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .divContact h3 {
+    text-align: center;
+  }
+  #Contact h1 {
+    grid-area: Titulo;
+  }
+  #ContactC h1 {
+    grid-area: Titulo;
+    display: flex;
     /* position: absolute; */
     justify-content: center;
     /* writing-mode: vertical-rl;
     text-orientation:mixed; */
     font-size: 10vh;
-    }
-    footer{
-        display: none;
-    }
-    /*CONTACT Form*/
-    #contactForm{
-        display: grid;
-        grid-template-areas: 
-        "Titulo"
-        "Formato"
-        "Links";
-    }
-    form{
-        background-color: var(--colorPar);
-        display: inline;
-        text-align: center;
-        padding: 15px;
-    }
-    form label{
-        padding: 5px;
-        margin: 5px;
-        color: white;
-        width: 100%;
-        font-size: large;
-    }
-    form input{
-        margin: 10px;
-        border-radius: 5px;
-        font-size: large;
-    }
-    form p{
-        margin: 5px;
-        padding: 5px;
-    }
-    form h2{
-        color: white;
-        padding: 5px;
-        background-color: var(--generalColor);
-    }
-    input[type=submit], input[type=reset] {
-        background-color: var(--generalColor);
-        font-size: large;
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-decoration: none;
-        margin: 4px 2px;
-        cursor: pointer;
-      }
-    input[type=reset]:hover{
-          background-color: white;
-          color: var(--generalColor);
-      }
-    input[type=submit]:hover {
-        background-color: white;
-        color: var(--generalColor);
-    }
-    #contactReason{
-        width: 90%;
-    }
-    select{
-        border-radius: 5px;
-        padding: 5px;
-        background-color: var(--colorImpar);
-    }
+  }
+  footer {
+    display: none;
+  }
+  /*CONTACT Form*/
+  #contactForm {
+    display: grid;
+    grid-template-areas:
+      "Titulo"
+      "Formato"
+      "Links";
+  }
+  form {
+    background-color: var(--colorPar);
+    display: inline;
+    text-align: center;
+    padding: 15px;
+  }
+  form label {
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    width: 100%;
+    font-size: large;
+  }
+  form input {
+    margin: 10px;
+    border-radius: 5px;
+    font-size: large;
+  }
+  form p {
+    margin: 5px;
+    padding: 5px;
+  }
+  form h2 {
+    color: white;
+    padding: 5px;
+    background-color: var(--generalColor);
+  }
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: var(--generalColor);
+    font-size: large;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  input[type="reset"]:hover {
+    background-color: white;
+    color: var(--generalColor);
+  }
+  input[type="submit"]:hover {
+    background-color: white;
+    color: var(--generalColor);
+  }
+  #contactReason {
+    width: 90%;
+  }
+  select {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--colorImpar);
+  }
 }
