@@ -5,48 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="./Assets/IconoR.png"/>
-    <link rel="stylesheet" href="./Styles/styles.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Styles/styles.css"/>
     <title>:::Rafael Martinez:::</title>
 </head>
 <body>
     <header>
-        <div class="cabeza">
-            <img src="./Assets/IconoR.png" class="logoTop"/>
-            <nav class="nav">
-                <ul>
-                    <li>
-                        <a>Menu</a>
-                        <ul>
+        <div class="cabeza container-fluid row">
+            <img src="./Assets/IconoR.png" class="logoTop img-fluid col-xs-1 col-sm-1 col-md-1"/>
+            <nav class="nav nav-pills col-xs-11 col-sm-11 col-md-11 align-items-center justify-content-end bg-light">
+                <ul class="nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" role="button">Menu</a>
+                        <ul class="dropdown-menu">
                             <li>
-                                <a href="#Home">
+                                <a class="dropdown-item active" href="#Home">
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="#About">
+                                <a class="dropdown-item" href="#About">
                                     About
                                 </a>
                             </li>
                             <li>
-                                <a href="#Skillset">
+                                <a class="dropdown-item" href="#Skillset">
                                     Skillset
                                 </a>
                             </li>
                             <li>
-                                <a href="#Projects">
+                                <a class="dropdown-item" href="#Projects">
                                     Projects
                                 </a>
                             </li>
                             <li>
-                                <a href="./Pages/Shop.html" target="_blank">
+                                <a class="dropdown-item" href="./Pages/Shop.html" target="_blank">
                                     Shops
                                 </a>
                             </li>
                             <li>
-                                <a href="#Contact">
+                                <a class="dropdown-item" href="./Pages/mailContact.html">
                                     Contact
                                 </a>
                             </li>
@@ -57,216 +59,44 @@
         </div>
     </header>
     <!-- Home CON NAVEGACION A OTRAS PAGINAS-->
-    <section id="Home" class="homeClass">
-        
-        <div class="carruselHome">
-            <div class="Foto">
-                <div class="hexaMain generalStyleBorder">
-                        <a href="#About">
-                            <img src="./Assets/selfportrait.jpg" title="Hola soy Rafa" alt="Vector sef-portraid"/>
-                        </a>
-                </div>
+<section id="Home" class="container-fluid d-flex align-items-center py-2">
+    
+   <div class="grupoCat align-items-center row">
+    <div class="Foto col-sm-12 col-md-3">
+        <img src="./Assets/selfportrait.jpg" class="img-fluid col-xs-12 col-sm-12 col-md-12 rounded">
+    </div>
+     <div class="col-sm-12 col-md-3 py-2">
+        <div class="card shadow">
+            <img src="./Assets/Imagenes/VFX/ICC.jpg" class="card-img-top" alt="VFX and Shows"/>
+            <div class="vfxCard card-body rounded-bottom">
+                <h2 class="card-title text-center">vfx</h2>
             </div>
-            <div class="Hexagonos1">
-                <div class="hexaMain backStyleBorder">
-                    <p>Love 3dPrint</p>
-                </div>
-                <div class="hexaMain backStyleBorder">
-                    <p>Love Starwars</p>
-                </div>
-                <div class="hexaMain backStyleBorder">
-                    <p>Love Funkos</p>
-                </div>
-                <div class="hexaMain backStyleBorder">
-                    <p>Love CNC</p>
-                </div>
-            </div>
-            <div class="Hexagonos2">
-                <div class="hexaMain vfxStyleBorder">
-                    <a href="./Pages/Vfx.html">
-                        <img src="./Assets/Imagenes/VFX/ICC.jpg" id="VFX" title="Click for more VFX" alt="Show with huge led screen"/>
-                        <h3>VFX</h3>
-                    </a>
-                </div>
-                <div class="hexaMain artsStyleBorder">
-                    <a href="./Pages/Arts.html">
-                        <img src="./Assets/Imagenes/Art/Creative.jpg" id="Art" title="Click for more Arts" alt="Shelf with art materials"/>
-                        <h3>Arts</h3>
-                    </a>
-                </div>
-                <div class="hexaMain devStyleBorder">
-                    <a href="./Pages/Development.html">
-                        <img src="./Assets/Imagenes/Dev/Dev.jpg" id="Dev" title="Click for more Developement" alt="Computers on a desk"/>
-                        <h3>Dev</h3>
-                    </a>
-                </div>
-            </div>
-            <div class="Hexagonos3">
-                <div class="hexaMain backStyleBorder">
-                    <p>Love Illustration</p>
-                </div>
-                <div class="hexaMain backStyleBorder">
-                    <p>Love Fixing Things</p>
-                </div>
-                <div class="hexaMain backStyleBorder">
-                    <p>Love DIY</p>
-                </div>
-                <div class="hexaMain backStyleBorder">
-                    <p>Love Sci-fi</p>
-                </div>
-            </div>
-            <h1 class="textoHome">Hi, I'm Rafa</h1>
         </div>
-    </section>
-    <!-- About -->
-    <section id="About" class="aboutClass">
-        <div class="hexaMain generalStyleBorder aboutFoto">
-            <a href="#Home">
-            <img src="./Assets/selfportrait.jpg" title="Hola soy Rafa" alt="Vector sef-portraid"/>
-            </a>
-        </div>
-        <div class="aboutDesc">
-            <p>Visual Artist far interested in cross-bounds between tech, creativity and marketing with Wide experience in creation, planning and execution of digital and interactive products  for high scale projects in broadcast, live-shows, education and marketing (direction, execution, team leadership and budged projections). Developing new skills on web and software development. Commited to be envolved in great team work enviroment focused in goals.
-                Open to relocate.</p>
-        </div>
-        <h1 class="aboutTitle">About</h1>  
-    </section>
-    <!-- Skillset -->
-    <section id="Skillset" class="skillsetClass"> 
-        <div class="groupSkill">
-            <div id="generalSkills">
-                <h3>General</h3>
-                <div  class="skillItem hexaMain generalStyleBorder">
-                    <a class="skillDesc">Spanish Native</a>
-                    <img src="./Assets/Imagenes/Ln/colombia.png"/>
-                </div>
-                <div class="skillItem hexaMain generalStyleBorder">
-                    <a class="skillDesc">English High</a>
-                    <img src="./Assets/Imagenes/Ln/united-states.png"/>
-                </div>
-                <div class="skillItem hexaMain generalStyleBorder">
-                    <a class="skillDesc">Windows</a>
-                    <img src="./Assets/Imagenes/Soft/microsoft.png"/>
-                </div>
-                <div class="skillItem hexaMain generalStyleBorder">
-                    <a class="skillDesc">Mac</a>
-                    <img src="./Assets/Imagenes/Soft/apple.png"/>
-                </div>
-                <div class="skillItem hexaMain generalStyleBorder">
-                    <a class="skillDesc">Office</a>
-                    <img src="./Assets/Imagenes/Soft/office.png"/>
-                </div>
-                <div class="skillItem hexaMain generalStyleBorder">
-                    <a class="skillDesc">Microsoft Word</a>
-                    <img src="./Assets/Imagenes/Soft/word.png"/>
-                </div>
-                <div class="skillItem hexaMain generalStyleBorder">
-                    <a class="skillDesc">Microsoft excel</a>
-                    <img src="./Assets/Imagenes/Soft/excel.png"/>
-                </div>
+     </div>
+     <div class="col-sm-12 col-md-3 py-2">
+        <div class="card shadow">
+            <img src="./Assets/Imagenes/Art/Creative.jpg" class="card-img-top" alt="Art stuff in shelf"/>
+            <div class="artCard card-body rounded-bottom">
+                <h2 class="card-title text-center">Arts</h2>
             </div>
-            <div id="VFX">
-                <h3>VFX</h3>
-                <div  class="skillItem hexaMain vfxStyleBorder">
-                    <a class="skillDesc">After Effects</a>
-                    <img src="./Assets/Imagenes/Soft/despues-de-los-efectos.png"/>
-                </div>
-                <div class="skillItem hexaMain vfxStyleBorder">
-                    <a class="skillDesc">Premiere</a>
-                    <img src="./Assets/Imagenes/Soft/estreno-profesional.png"/>
-                </div>
-            </div>
-            <div id="Art">
-                <h3>Arts</h3>
-                <div  class="skillItem hexaMain artsStyleBorder">
-                    <a class="skillDesc">Illustrator</a>
-                    <img src="./Assets/Imagenes/Soft/ilustrador.png"/>
-                </div>
-                <div class="skillItem hexaMain artsStyleBorder">
-                    <a class="skillDesc">Photoshop</a>
-                    <img src="./Assets/Imagenes/Soft/photoshop.png"/>
-                </div>
-            </div>
-            <div id="Dev">
-                <h3>Dev</h3>
-                <div  class="skillItem hexaMain devStyleBorder">
-                    <a class="skillDesc">HTML 5</a>
-                    <img src="./Assets/Imagenes/Soft/html-5.png"/>
-                </div>
-                <div class="skillItem hexaMain devStyleBorder">
-                    <a class="skillDesc">CSS 3</a>
-                    <img src="./Assets/Imagenes/Soft/css-3.png"/>
-                </div>
-            </div>
-            <h1>Skillset</h1>
         </div>
-        
-    </section>
-    <!-- Projects --><!--Agregar carga dinamica de proyectos segun el ancho de pantalla y dispositivo y descripcion extra en rollOver-->
-    <section id="Projects" class="projectsClass">
-        
-        <div class="groupProjects">
-            <a id="Project1" class="hexaMain vfxStyleBorder projectHov" href="./Assets/Projects/VFX/ICC.jpg">
-                <img src="./Assets/Imagenes/VFX/ICC.jpg" id="P1Ph" title="Internationl Chamber of comerce" alt="Show with huge led screen"/>
-                <p class="projectDesc">International Chamber of Comerce Bogotá Colombia</p>
-            </a>
-            <a id="Project2" class="hexaMain artsStyleBorder projectHov" href="./Assets/Projects/Art/FlamingoToteBag.jpg">
-                <img src="./Assets/Projects/Art/FlamingoToteBag.jpg" id="P2Ph" title="Ilustration of a Flamingo in a totebag" alt="Pink Flamingo over a blue background"/>
-                
-                <p class="projectDesc">Character Design</p>
-            </a>
-            <a id="Project3" class="hexaMain generalStyleBorder projectHov" href="https://www.youtube.com/watch?v=NGb0wuEV_6U" target="_blank">
-                <img src="./Assets/selfportrait.jpg" id="P3Ph" title="Developement" alt="Computers on a desk"/>
-                
-                <p class="projectDesc">Personal Web</p>
-            </a>
-            <a id="Project4" class="hexaMain artsStyleBorder projectHov" href="./Assets/Projects/Art/Iguana.jpg" target="_blank">
-                <img src="./Assets/Projects/Art/Iguana.jpg" id="P4Ph" title="Ilustration of a Iguana" alt="Iguana"/>
-                
-                <p class="projectDesc">Character Design for Book</p>
-            </a>
+     </div>
+     <div class="col-sm-12 col-md-3 py-2">
+        <div class="card shadow">
+            <img src="./Assets/Imagenes/Dev/Dev.jpg" class="card-img-top" alt="Art stuff in shelf"/>
+            <div class="devCard card-body rounded-bottom">
+                <h2 class="card-title text-center">Dev</h2>
+            </div>
         </div>
-        <h1>Projects</h1>
-    </section>
-    <!-- Contact -->
-    <section id="Contact" class="contactClass">
-        
-       <div class="divContact">
-            <a href="https://www.instagram.com/raphoto1/" target="_blank" id="insta" class="linkBox">
-                <svg xmlns="http://www.w3.org/2000/svg" width="146.411" height="146.378" viewBox="0 0 146.411 146.378">
-                <path id="Icon_awesome-instagram" data-name="Icon awesome-instagram" d="M73.216,37.9a37.529,37.529,0,1,0,37.529,37.529A37.47,37.47,0,0,0,73.216,37.9Zm0,61.929a24.4,24.4,0,1,1,24.4-24.4A24.443,24.443,0,0,1,73.216,99.826Zm47.818-63.464a8.754,8.754,0,1,1-8.754-8.754A8.733,8.733,0,0,1,121.035,36.362Zm24.856,8.884c-.555-11.726-3.234-22.113-11.824-30.67C125.509,6.018,115.123,3.34,103.4,2.752c-12.085-.686-48.308-.686-60.393,0-11.693.555-22.08,3.234-30.67,11.791S1.1,33.488.509,45.214c-.686,12.085-.686,48.308,0,60.393.555,11.726,3.234,22.113,11.824,30.67S31.277,147.513,43,148.1c12.085.686,48.308.686,60.393,0,11.726-.555,22.113-3.234,30.67-11.824,8.558-8.558,11.236-18.944,11.824-30.67.686-12.085.686-48.276,0-60.361Zm-15.613,73.328a24.7,24.7,0,0,1-13.914,13.914c-9.636,3.822-32.5,2.94-43.147,2.94s-33.545.849-43.147-2.94a24.7,24.7,0,0,1-13.914-13.914c-3.822-9.636-2.94-32.5-2.94-43.147s-.849-33.545,2.94-43.147A24.7,24.7,0,0,1,30.069,18.365c9.636-3.822,32.5-2.94,43.147-2.94s33.545-.849,43.147,2.94a24.7,24.7,0,0,1,13.914,13.914c3.822,9.636,2.94,32.5,2.94,43.147S134.1,108.971,130.278,118.574Z" transform="translate(0.005 -2.238)"/>
-              </svg>
-                <h3>Instagram</h3>
-                
-            </a>
-            <a href="https://www.linkedin.com/in/rafael-mart%C3%ADnez-0a579b63/" target="_blank" id="Linkedin" class="linkBox">
-                <svg xmlns="http://www.w3.org/2000/svg" width="144.555" height="144.555" viewBox="0 0 144.555 144.555">
-                    <path id="Icon_awesome-linkedin" data-name="Icon awesome-linkedin" d="M134.23,2.25H10.293A10.37,10.37,0,0,0,0,12.672V136.383a10.37,10.37,0,0,0,10.293,10.422H134.23a10.4,10.4,0,0,0,10.325-10.422V12.672A10.4,10.4,0,0,0,134.23,2.25Zm-90.541,123.9H22.264V57.168H43.721v68.986ZM32.977,47.746A12.423,12.423,0,1,1,45.4,35.323,12.428,12.428,0,0,1,32.977,47.746ZM124,126.154H102.576V92.6c0-8-.161-18.3-11.132-18.3C80.28,74.3,78.57,83.014,78.57,92.016v34.138H57.144V57.168H77.7V66.59h.29c2.872-5.421,9.874-11.132,20.3-11.132,21.683,0,25.717,14.294,25.717,32.88Z" transform="translate(0 -2.25)"/>
-                  </svg>     
-                <h3>Linkedin</h3>
-            </a>
-            <a href="https://www.behance.net/Raphoto1" target="_blank" id="Behance"class="linkBox">
-                <svg xmlns="http://www.w3.org/2000/svg" width="154.462" height="154.462" viewBox="0 0 154.462 154.462">
-                    <path id="Icon_awesome-behance-square" data-name="Icon awesome-behance-square" d="M64.3,92.238c0,6.654-4.827,8.757-10.757,8.757H37.995V82.756h15.86C60.268,82.791,64.3,85.446,64.3,92.238ZM61.647,63.862c0-6.1-4.724-7.551-9.964-7.551H38.029V71.758H52.752c5.206,0,8.9-2.276,8.9-7.9Zm45.615,8c-6.309,0-10.516,3.931-10.93,10.24h21.445C117.191,75.723,113.881,71.861,107.261,71.861Zm47.2-53.062V140.162a16.554,16.554,0,0,1-16.549,16.549H16.549A16.554,16.554,0,0,1,0,140.162V18.8A16.554,16.554,0,0,1,16.549,2.25H137.912A16.554,16.554,0,0,1,154.462,18.8ZM93.677,55H120.5V48.485H93.677ZM78.851,93.031c0-8.309-3.931-15.481-12.067-17.791,5.93-2.827,9.033-6.1,9.033-12.757,0-13.171-9.826-16.377-21.17-16.377h-31.2v66.2h32.1C67.577,112.235,78.851,106.477,78.851,93.031Zm52.165-5.1c0-14.171-8.309-26-23.307-26C93.091,61.932,83.2,72.9,83.2,87.307c0,14.929,9.413,25.169,24.514,25.169,11.447,0,18.86-5.137,22.445-16.136H118.536c-1.276,4.1-6.413,6.241-10.412,6.241-7.723,0-11.757-4.517-11.757-12.171h34.547C130.948,89.618,131.017,88.756,131.017,87.928Z" transform="translate(0 -2.25)"/>
-                </svg>
-                <h3>behance</h3> 
-            </a>
-            <a id="Mail" class="linkBox" href="./Pages/mailContact.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="221.131" height="174.622" viewBox="0 0 221.131 174.622">
-                    <g id="Icon_feather-mail" data-name="Icon feather-mail" transform="translate(10.927 4)">
-                      <path id="Trazado_8" data-name="Trazado 8" d="M22.328,6H176.95a19.385,19.385,0,0,1,19.328,19.328V141.294a19.385,19.385,0,0,1-19.328,19.328H22.328A19.385,19.385,0,0,1,3,141.294V25.328A19.385,19.385,0,0,1,22.328,6Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
-                      <path id="Trazado_9" data-name="Trazado 9" d="M196.278,9,99.639,76.647,3,9" transform="translate(0 16.328)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
-                    </g>
-                  </svg>   
-                <h3>Mail</h3>
-            </a>
-       </div>
-        <h1>Contact</h1>
-        <!--Agregar mail popup a futuro-->
-    </section>
+     </div>
+   </div>
+    <h1 class="row fs-7">Hi I'm Rafa</h1>
+</section>
     <footer>
         <h4>Rafael Martinez 2022</h4>
         <h4>Visual Artist</h4>
     </footer>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
