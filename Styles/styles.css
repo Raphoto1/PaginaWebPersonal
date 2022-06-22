@@ -24,9 +24,6 @@
     --tamanoImagenesSkill: 12vh;
 }
 /*HOME*/
-.cabeza{
-    z-index: 2;
-}
 #Home{
     /* display: flex; */
     align-items: center;
@@ -50,4 +47,7 @@
 }
 .devCard{
     background-color: var(--devColor);
+}
+.contactForm{
+    
 }
