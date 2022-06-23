@@ -1,0 +1,29 @@
+/*colores por categoria y estilos para reutilizar*/
+:root {
+  --colorImpar: rgb(230, 230, 230);
+  --colorImparVfx: rgb(255, 206, 252);
+  --colorImparArts: rgb(252, 187, 187);
+  --colorImparDev: rgb(252, 224, 187);
+  --colorPar: rgb(150,150,150);
+  --colorParVfx: rgb(145, 116, 146);
+  --colorParArts: rgb(149, 102, 102);
+  --colorParDev: rgb(149, 140, 102);
+  --generalColor: #009CDE;
+  --vfxColor: #CA00DE;
+  --artsColor: #DE002D;
+  --devColor: #DEB100;
+  --bordeGeneral: 5px;
+  --tamanoImagenes: 30vh;
+  --tamanoImagenesIn: 25vh;
+  --tamanoImagenesSkill: 12vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.cabeza {
+  background-color: aqua;
+}/*# sourceMappingURL=baseStyle.css.map */
