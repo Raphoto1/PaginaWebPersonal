@@ -18,108 +18,162 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./Styles/styles.css" />
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+    <!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+    <link rel="stylesheet" href="./Styles/Scss/baseStyle.css" />
     <title>:::Rafael Martinez:::</title>
   </head>
   <body>
-    <header class="container-fluid d-flex py-2">
-      <a href="./../Index.html" class="">
-      <img
-            src=".././Assets/IconoR.png"
-            class="logoTop img-fluid"
-            />
-        </a>    
-        <nav
-          class="nav nav-pills bg-light align-items-center"
-        >
-          <ul class="nav">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link active dropdown-toggle"
-                data-bs-toggle="dropdown"
-                role="button"
-                >Menu</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item active" href="#Home"> Home </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#About"> About </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#Skillset"> Skillset </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#Projects"> Projects </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="./Pages/Shop.html"
-                    target="_blank"
-                  >
-                    Shops
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Pages/mailContact.html">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+    <header>
+      <section class="mb-3">
+        <nav class="navbar sticky-top navbar-light bg-light">
+          <div class="container-fluid">
+            <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img
+          src="./Assets/IconoR.png"
+          height="40"
+          alt="MDB Logo"
+          loading="lazy"
+        />
+      </a>
+            <button class="navbar-toggler ms-auto" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#navbarToggleExternalContent4"
+              aria-controls="navbarToggleExternalContent4" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </nav>
+        <div class="collapse" id="navbarToggleExternalContent4">
+          <div class="bg-light shadow-3 p-4">
+            <button class="btn btn-link btn-block border-bottom m-0">Link 1</button>
+            <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
+            <button class="btn btn-link btn-block m-0">Link 3</button>
+          </div>
+        </div>
+      </section>
       
     </header>
     <!-- Home CON NAVEGACION A OTRAS PAGINAS-->
-    <section id="Home" class="container-fluid d-flex align-items-center py-2">
-      <div class="grupoCat align-items-center row">
-        <div class="Foto col-sm-12 col-md-3">
-          <img
-            src="./Assets/selfportrait.jpg"
-            class="img-fluid col-xs-12 col-sm-12 col-md-12 rounded"
-          />
-        </div>
-        <div class="col-sm-12 col-md-3 py-2">
-          <div class="card shadow">
-            <img
-              src="./Assets/Imagenes/VFX/ICC.jpg"
-              class="card-img-top"
-              alt="VFX and Shows"
-            />
-            <div class="vfxCard card-body rounded-bottom">
-              <h2 class="card-title text-center">vfx</h2>
+    <section id="Home" class="homeGroup py-2">
+      <div class="grid hexaGrid">
+        <ul id="hexGrid">
+           
+          <li class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+                    <div class='img Portrait'></div>
+                <h1 id="demo1">Hi, I´m Rafa</h1>
+              </a>
             </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-3 py-2">
-          <div class="card shadow">
-            <img
-              src="./Assets/Imagenes/Art/Creative.jpg"
-              class="card-img-top"
-              alt="Art stuff in shelf"
-            />
-            <div class="artCard card-body rounded-bottom">
-              <h2 class="card-title text-center">Arts</h2>
+          </li>
+          <li class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+                <div class='img vfxMain'></div>
+                <h1 id="demo1">Vfx</h1>
+                <p id="demo2">Visual FX, Broadcast and Show content creation</p>
+              </a>
             </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-3 py-2">
-          <div class="card shadow">
-            <img
-              src="./Assets/Imagenes/Dev/Dev.jpg"
-              class="card-img-top"
-              alt="Art stuff in shelf"
-            />
-            <div class="devCard card-body rounded-bottom">
-              <h2 class="card-title text-center">Dev</h2>
+          </li>
+          <li class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+                <div class='img artsMain'></div>
+                <h1 id="demo1">Arts</h1>
+                <p id="demo2">Illustration and design</p>
+              </a>
             </div>
+          </li>
+          <li class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+                <div class='img devMain'></div>
+                <h1 id="demo1">Dev</h1>
+                <p id="demo2">Full Stack web Dev</p>
+              </a>
+            </div>
+          </li>
+          <!-- Dejo imagenes Stock Para agregar las finales de Extras -->
+          <li class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+             <div class='img' style='background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
+                <h1 id="demo1">This is a title</h1>
+                <p id="demo2">Some sample text about the article this hexagon leads to</p>
+              </a>
+            </div>
+          </li>
+          <li class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+                <div class='img' style='background-image: url(https://images.unsplash.com/photo-1417026846249-f31f7e43fc35?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
+                <h1 id="demo1">This is a title</h1>
+                <p id="demo2">Some sample text about the article this hexagon leads to</p>
+              </a>
+            </div>
+          </li>
+          <li class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+                <div class='img' style='background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
+                <h1 id="demo1">This is a title</h1>
+                <p id="demo2">Some sample text about the article this hexagon leads to</p>
+              </a>
+            </div>
+          </li>
+          <li class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+                <div class='img' style='background-image: url(https://images.unsplash.com/photo-1423145369430-a9ea0de096cd?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
+                <h1 id="demo1">This is a title</h1>
+                <p id="demo2">Some sample text about the article this hexagon leads to</p>
+              </a>
+            </div>
+          </li>
+          
+         <li class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+                <div class='img' style='background-image:url(https://images.unsplash.com/photo-1417436026361-a033044d901f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=faa4e192f33e0d6b7ce0e54f15140e42);'></div>
+                <h1 id="demo1">This is a title</h1>
+                <p id="demo2">Some sample text about the article this hexagon leads to</p>
+              </a>
+            </div>
+          </li>
+        </ul>
           </div>
-        </div>
+    </section>
+    <section id="About">
+      <div class="aboutTitle">
+        <h1>About</h1>
       </div>
-      <h1 class="row fs-7">Hi I'm Rafa</h1>
+      <div class="aboutPhoto">
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink" href="#">
+              <div class='img Portrait'></div>
+            </a>
+          </div>
+        </li>
+      </div>
+      <div class="aboutDesc">
+        <p></p>
+      </div>
     </section>
     <footer>
       <h4>Rafael Martinez 2022</h4>
@@ -131,5 +185,10 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+></script>
   </body>
 </html>
