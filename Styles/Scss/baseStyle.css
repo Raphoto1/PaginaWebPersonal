@@ -376,124 +376,19 @@
   shape-outside: repeating-linear-gradient(rgba(0, 0, 0, 0) 0 calc(var(--f) - 3px), #000 0 var(--f));
 }
 
-#Contact {
-  display: grid;
-  grid-template-areas: "Titulo Links";
-  background-color: var(--colorPar);
-  height: 100vh;
-}
-
-.divContact {
-  grid-area: Links;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  align-items: center;
-  align-self: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-.linkBox {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-#ContactC {
-  display: grid;
-  grid-template-areas: "Titulo Links" "Titulo Links";
-  background-color: var(--colorPar);
-  height: 100%;
-  width: 100%;
-}
-
-#Contact h1 {
-  grid-area: Titulo;
-  display: flex;
-  /* position: absolute; */
-  justify-content: center;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 28vh;
-}
-
-.contactForm div h1 {
-  grid-area: Titulo;
-  display: flex;
-  /* position: absolute; */
-  justify-content: center;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 28vh;
-}
-
-/*CONTACT form*/
 #contactForm {
-  display: grid;
-  grid-template-areas: "Titulo Formato" "Links Links";
-}
-
-form {
   background-color: var(--colorPar);
-  display: inline;
-  text-align: center;
-  padding: 15px;
+  /* height: 100vh;
+  width: 100%; */
 }
 
-form label {
-  padding: 10px;
-  margin: 10px;
-  color: white;
-  width: 100vw;
-  font-size: large;
+#contactForm h1 {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 10rem;
 }
 
-form input {
-  margin: 10px;
-  border-radius: 5px;
-  font-size: large;
-}
-
-form p {
-  margin: 10px;
-  padding: 5px;
-}
-
-form h2 {
-  color: white;
-  padding: 5px;
-  background-color: var(--generalColor);
-}
-
-input[type=submit],
-input[type=reset] {
-  background-color: var(--generalColor);
-  font-size: large;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-input[type=reset]:hover {
-  background-color: white;
-  color: var(--generalColor);
-}
-
-input[type=submit]:hover {
-  background-color: white;
-  color: var(--generalColor);
-}
-
-select {
-  border-radius: 5px;
-  padding: 5px;
+.Contact {
   background-color: var(--colorImpar);
 }/*# sourceMappingURL=baseStyle.css.map */
