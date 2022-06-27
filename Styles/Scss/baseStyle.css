@@ -377,10 +377,6 @@
 }
 
 #Contact {
-  background-color: var(--colorImpar);
-}
-
-#Contact {
   display: grid;
   grid-template-areas: "Titulo Links";
   background-color: var(--colorPar);
@@ -425,7 +421,7 @@
   font-size: 28vh;
 }
 
-#ContactC h1 {
+.contactForm div h1 {
   grid-area: Titulo;
   display: flex;
   /* position: absolute; */

@@ -1,6 +1,4 @@
-#Contact{
-background-color: var(--colorImpar);
-}
+
 #Contact {
     display: grid;
     grid-template-areas: "Titulo Links";
@@ -42,7 +40,7 @@ background-color: var(--colorImpar);
     text-orientation: mixed;
     font-size: 28vh;
   }
-  #ContactC h1 {
+ .contactForm div h1 {
     grid-area: Titulo;
     display: flex;
     /* position: absolute; */
