@@ -374,4 +374,8 @@
   float: left;
   height: 120%;
   shape-outside: repeating-linear-gradient(rgba(0, 0, 0, 0) 0 calc(var(--f) - 3px), #000 0 var(--f));
+}
+
+#Contact {
+  background-color: var(--colorImpar);
 }/*# sourceMappingURL=baseStyle.css.map */
