@@ -12,3 +12,10 @@
 .Contact{
     background-color: var(--colorImpar);
 }
+.divContact{
+    display: flex;
+    justify-content: space-between;
+    a{
+        text-decoration: none;
+    }
+}

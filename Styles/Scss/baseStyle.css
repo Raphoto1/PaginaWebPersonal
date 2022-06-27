@@ -391,4 +391,17 @@
 
 .Contact {
   background-color: var(--colorImpar);
+}
+
+.divContact {
+  display: flex;
+  justify-content: space-between;
+}
+.divContact a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=baseStyle.css.map */
