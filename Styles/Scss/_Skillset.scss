@@ -38,6 +38,7 @@
   .containerSG div:nth-child(odd) {
     background:var(--colorPar);
   }
+ 
   .containerSG::before {
     content: "";
     width: calc(var(--s)/2 + var(--m));
@@ -60,3 +61,12 @@
       background-color: $colorImpar;
     }
   }
+
+  // crear las variedades de fondo de los hexa pisando el codigo base
+@each $categoriaC, $col in $categoriasCards{
+  .containerSg#{$categoriaC} div:nth-child(odd){
+      background: $col;
+      
+  }
+  
+}

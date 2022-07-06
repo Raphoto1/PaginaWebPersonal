@@ -28,11 +28,12 @@
     }
     
 }
-// cartas para categorias
+// cartas para categorias con Extend
 .card{
-    -webkit-animation:flip-in-diag-2-br .5s cubic-bezier(.25,.46,.45,.94) both;animation:flip-in-diag-2-br .5s cubic-bezier(.25,.46,.45,.94) both
+    @extend .flip-in-diag-2-br
 }
-//animacion con demora de entrada de cards
+
+// animacion con demora de entrada de cards
 @for $demora from 1 to 5 {
     .card:nth-child(#{$demora}){
         animation-delay: 0.2s * $demora;

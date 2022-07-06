@@ -18,7 +18,7 @@
   --tamanoImagenesSkill: 12vh;
 }
 
-.flip-in-diag-2-br {
+.flip-in-diag-2-br, .card {
   -webkit-animation: flip-in-diag-2-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: flip-in-diag-2-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -344,11 +344,6 @@
   background-color: var(--devColor);
 }
 
-.card {
-  -webkit-animation: flip-in-diag-2-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: flip-in-diag-2-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
 .card:nth-child(1) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
@@ -488,6 +483,18 @@
 
 .skillsetDev {
   background-color: var(--colorImparDev);
+}
+
+.containerSgVfxC div:nth-child(odd) {
+  background: var(--vfxColor);
+}
+
+.containerSgArtsC div:nth-child(odd) {
+  background: var(--artsColor);
+}
+
+.containerSgDevC div:nth-child(odd) {
+  background: var(--devColor);
 }
 
 #contactForm {
