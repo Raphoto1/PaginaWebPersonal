@@ -1,8 +1,22 @@
 #About{
     background-color: var(--colorPar);
-    height: 100vh;
+    height: 100%;
     width: 100%;
     .aboutPhoto{
+        height: 50%;
+        img{
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    }
+    .aboutDesc{
+        color: white;
+        font-size: xx-large;
+    }
+    
+}
+@media only screen and (max-width: 850px) {
+    .aboutPhoto{
+        display: none !important;
         height: 50%;
         img{
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);

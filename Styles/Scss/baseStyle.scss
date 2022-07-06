@@ -18,6 +18,16 @@
     transform: rotate(180deg);
     font-size: 10em;
 }
+.colorNav{
+    color: gray;
+}
+#navega{
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    width: 100%;
+    background-color: white;
+}
 footer{
     display: flex;
     justify-content: space-around;    
