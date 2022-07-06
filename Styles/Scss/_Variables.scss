@@ -17,10 +17,28 @@
     --tamanoImagenesIn: 25vh;
     --tamanoImagenesSkill: 12vh;
 }
-//Exagono
-%Hexagono {
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+$Instacol: (
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d),
+    padding: 4px,
+    border-radius: 25%,
+);
+$lincol:(
+    color: var(--generalColor),
+    padding: 4px,
+    border-radius: 25%,
+);
+$tamanosFoot:(
+    height: 20px,
+);
+//ajuste rapido
+.centrarTodo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
+//Exagono
+%Hexagono { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+
 //mix de tamaño foto
 @mixin tFoto($alto) {
     height: $alto;

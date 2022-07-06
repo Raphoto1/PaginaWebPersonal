@@ -6,21 +6,20 @@
     .aboutPhoto{
         @include tFoto(50%);
         img{
-            @include Exagono;
+            @extend %Hexagono;
         }
     }
     .aboutDesc{
         color: white;
         font-size: xx-large;
-    }
-    
+    } 
 }
 @media only screen and (max-width: 850px) {
     .aboutPhoto{
         display: none !important;
         @include tFoto(50%);
         img{
-            @include Exagono
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         }
     }
     .aboutDesc{

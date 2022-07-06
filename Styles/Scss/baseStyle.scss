@@ -8,6 +8,7 @@
 @import "./_Skillset.scss";
 @import "./_Contact.scss";
 @import "./_Projects.scss";
+@import "./footer.scss";
 //elementos para aplicar en general directo
 .titleV{
     display: flex;
@@ -21,6 +22,7 @@
 .colorNav{
     color: gray;
 }
+
 #navega{
     position: fixed;
     top: 0px;
