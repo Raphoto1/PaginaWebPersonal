@@ -12,12 +12,7 @@
       rel="stylesheet"
     />
     <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Font Awesome -->
 <link
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -38,36 +33,52 @@ rel="stylesheet"
   </head>
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
-        <a class="navbar-brand" href="#Home"><strong><img src="/Assets/IconoR.png" height="30" alt="logo">Rafael Martinez</strong></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="./../Index.html">Home <span class="sr-only">(current)</span></a>
+
+    <nav id="navega" class="navbar navbar-expand-sm">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+              <img src="/Assets/IconoR.png" alt="" width="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav  p-3">
+  
+                  <li class="nav-item">
+                    <a class="nav-link colorNav" href="#Home">
+                      Home
+                    </a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link colorNav" href="./Pages/mailContact.html">
+                      Let's Talk
+                    </a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link colorNav" href="https://www.facebook.com/esteesmicuento">
+                      <i  id="figuras" class="fab fa-facebook-f">
+                      </i>
+                    </a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link colorNav" href="https://www.behance.net/Raphoto1">
+                      <i id="figuras" class="fab fa-behance">
+                      </i></a></li>
+                  <li class="nav-item ">
+                    <a class="nav-link colorNav" href="https://www.instagram.com/raphoto1/">
+                      <i id="figuras" class="fab fa-instagram">
+                      </i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link colorNav" href="https://www.linkedin.com/in/rafael-mart%C3%ADnez-0a579b63/"><i class="fab fa-linkedin"></i></a>
                 </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="./Pages/mailContact.html">Let's Talk <span class="sr-only"></span></a>
-              </li>
-            </ul>
-            <ul class="navbar-nav nav-flex-icons">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.facebook.com/esteesmicuento"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.behance.net/Raphoto1"><i class="fab fa-behance"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.instagram.com/raphoto1/"><i class="fab fa-instagram"></i></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.linkedin.com/in/rafael-mart%C3%ADnez-0a579b63/"><i class="fab fa-linkedin"></i></a>
-              </li>
-            </ul>
-        </div>
-    </nav>
+              </ul>
+          </div>
+      </div>
+  </nav>
     </header>
     <!-- Home CON NAVEGACION A OTRAS PAGINAS-->
     <section id="Home" class="homeGroup">
@@ -160,21 +171,23 @@ rel="stylesheet"
           </div>
     </section>
     <!-- ABOUT -->
-    <section id="About">
-      <div class="titleV">
-        <p>About</p>
-      </div>
-      <div class="aboutPhoto">
-        <img src="./Assets/selfportrait.jpg"/>
-      </div>
-      <div class="aboutDesc d-flex align-content-center">
-        <p>Visual Artist far interested in cross-bounds between tech, creativity and marketing with Wide experience in creation, planning and execution of digital and interactive products  for high scale projects in broadcast, live-shows, education and marketing (direction, execution, team leadership and budged projections). Developing new skills on web and software development. Commited to be envolved in great team work enviroment focused in goals.
-          Open to relocate.</p>
+    <section id="About" class="container-fluid d-flex">
+      <div class="row align-content-center">
+        <div class="titleV col-md-2 col-sm-1 justify-content-center">
+          <p>About</p>
+        </div>
+        <div class="aboutPhoto col-md-5 col-sm-none d-flex justify-content-center align-content-center">
+          <img src="./Assets/selfportrait.jpg"/>
+        </div>
+        <div class="aboutDesc col-md-5 d-flex align-content-center">
+          <p>Visual Artist far interested in cross-bounds between tech, creativity and marketing with Wide experience in creation, planning and execution of digital and interactive products  for high scale projects in broadcast, live-shows, education and marketing (direction, execution, team leadership and budged projections). Developing new skills on web and software development. Commited to be envolved in great team work enviroment focused in goals.
+            Open to relocate.</p>
+        </div>
       </div>
     </section>
     <!-- SKILLSET -->
     
-    <section id="Skillset container-fluid">
+    <section id="Skillset" class="container-fluid">
       <div class="row">
         <h1 class="titleV d-flex justify-content-center align-items-end col-md-2">SkillSet</h1>
         <div class="fullskills col">
@@ -290,7 +303,7 @@ rel="stylesheet"
       </div>
     </section>
     <!-- PROJECTS -->
-    <section id="Projects container-fluid">
+    <section id="Projects" class="container-fluid">
       <div class="row">
         <div class="titleV d-flex justify-content-center align-items-end col-md-2">
           <p>Projects</p>
@@ -438,11 +451,8 @@ rel="stylesheet"
       <h4>Visual Artist</h4>
     </footer>
     <!-- JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <!-- MDB -->
 <script
 type="text/javascript"
