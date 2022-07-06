@@ -14,3 +14,27 @@
         padding-bottom: 10%;
     }
 }
+// cambiar color de fondos de cada section en cada page de categoria
+@each $categoria, $colorImp in $categoriasImp{
+    .home#{$categoria}{
+        background-color: $colorImp;
+    }
+}
+// crear las variedades de fondo de las cartas segun categoria
+@each $categoriaC, $col in $categoriasCards{
+    .carta#{$categoriaC}{
+        background-color: $col;
+        
+    }
+    
+}
+// cartas para categorias
+.card{
+    -webkit-animation:flip-in-diag-2-br .5s cubic-bezier(.25,.46,.45,.94) both;animation:flip-in-diag-2-br .5s cubic-bezier(.25,.46,.45,.94) both
+}
+//animacion con demora de entrada de cards
+@for $demora from 1 to 5 {
+    .card:nth-child(#{$demora}){
+        animation-delay: 0.2s * $demora;
+    }
+}

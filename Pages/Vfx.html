@@ -1,184 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="./../Assets/IconoR.png"/>
-    <link rel="stylesheet" href="./../Styles/styles.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>:::Rafael Martinez:::VFX:::</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="./../Assets/IconoR.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+    <!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+    <link rel="stylesheet" href="./../Styles/Scss/baseStyle.css" />
+    <title>:::Rafael Martinez:::</title>
+  </head>
+  <body>
     <header>
-        <div class="cabeza">
-            <a href="./../Index.html">
-                <img src="./../Assets/IconoR.png" class="logoTop"/>
-            </a>
-            <nav class="nav">
-                <ul>
-                    <li>
-                        <a>Menu</a>
-                        <ul>
-                            <li>
-                                <a href="./../Index.html#Home">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./../Index.html#About">
-                                    About
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./../Index.html#Skillset">
-                                    Skillset
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./../Index.html#Projects">
-                                    Projects
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./../Pages/Shop.html" target="_blank">
-                                    Shops
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#Contact">
-                                    Contact
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+      <!-- barra de navegacion -->
+    <nav id="navega" class="navbar navbar-expand-sm">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="./../Index.html">
+              <img src="/Assets/IconoR.png" alt="" width="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav  p-3">
+  
+                  <li class="nav-item">
+                    <a class="nav-link colorNav" href="./../Index.html">
+                      Home
+                    </a>
+                  </li>
+                  <li class="nav-item ">
+                    <button type="button" class="btn" data-mdb-toggle="modal" data-mdb-target="#info" data-mdb-whatever="@Info">
+                      Let's Talk!
+                    </button>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link colorNav" href="https://www.facebook.com/esteesmicuento">
+                      <i  id="figuras" class="fab fa-facebook-f">
+                      </i>
+                    </a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link colorNav" href="https://www.behance.net/Raphoto1">
+                      <i id="figuras" class="fab fa-behance">
+                      </i></a></li>
+                  <li class="nav-item ">
+                    <a class="nav-link colorNav" href="https://www.instagram.com/raphoto1/">
+                      <i id="figuras" class="fab fa-instagram">
+                      </i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link colorNav" href="https://www.linkedin.com/in/rafael-mart%C3%ADnez-0a579b63/"><i class="fab fa-linkedin"></i></a>
+                </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
     </header>
-    <!-- Home VFX -->
-    <section id="Home" class="homeClassVfx">
-        
-        <div class="carruselHomeVfx">
-            <div class="hexaMain vfxStyleBorder">
-                <a href="#About">
-                    <img src="./../Assets/selfportrait.jpg" class="hexaMain" title="Hola soy Rafa" alt="Vector sef-portraid"/>
-                </a>
-            </div>
-            <div class="vReel">
-                <iframe src="https://www.youtube.com/watch?v=NGb0wuEV_6U" title="Reel">Video Reel</iframe>
-            </div>
-            <h1>Rafa Vfx</h1>
-        </div>
-    </section>
-    <!-- About VFX-->
-    <section id="About" class="aboutClassVfx">
-        <div class="aboutContent">
-            <div class="flotador">
-                
-                    <div class="hexaMain vfxStyleBorder flotadorIzq">
-                        <a href="#Home">
-                        <img src="./../Assets/selfportrait.jpg" title="Hola soy Rafa" alt="Vector sef-portraid"/>
-                        </a>
-                    </div>
-                    <div class="flotadorDer">
-                        <p>Aliqua cillum dolore ullamco ad ea id qui ut velit amet
-                        nulla excepteur in aliquip. Adipisicing anim ullamco enim
-                        amet id id sit consequat dolore aliqua commodo sit aute irure.
-                        Nostrud do do laboris enim ea enim deserunt adipisicing
-                        cupidatat minim tempor consequat.</p>
-                    </div>
-                
-            </div>
-           
-            <h1>About</h1>
+    <!-- Modal para contacto -->
+    <div class="modal fade" id="info" tabindex="-1" aria-labelledby="info" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Let's Talk</h5>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="container-fluid py-1 justify-content-center col-sm-8 col-md-12 align-items-center">
+              <label for="Name" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded"
+                >Name or Organization</label
+              >
+              <input type="text" id="Name" class="form-control col-md-2" />
+              <br />
+              <label for="Phone" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Phone</label>
+              <input
+                type="tel"
+                id="Phone"
+                placeholder="Phone Number"
+                class="form-control"
+              />
+              <br />
+              <label for="Email" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">E-mail</label>
+              <input
+                type="email"
+                id="Email"
+                placeholder="Your@mail.com"
+                class="form-control"
+              />
+              <br />
+              <label for="Country" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Country</label>
+              <select class="form-select">
+                <option selected="selected">Choose a Country</option>
+                <option>Colombia</option>
+                <option>Argentina</option>
+                <option>United States</option>
+              </select>
+              <br />
+              <div>
+                <h2 class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Reply via</h2>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="replyV"
+                    value="phoneC"
+                    class="form-check-input"
+                  />
+                  <label for="phoneC" class="form-check-label">Phone Call</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="replyV"
+                    value="emailC"
+                    class="form-check-input"
+                  />
+                  <label for="emailC" class="form-check-label">Email</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="replyV"
+                    value="Whatsapp"
+                    class="form-check-input"
+                  />
+                  <label for="Whatsapp" class="form-check-label">Whatsapp</label>
+                </div>
+              </div>
+              <br />
+              <h2 class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Any Specific Area?</h2>
+              <div class="form-check-inline">
+                <span class="form-check-label">General</span>
+                <input
+                  type="checkbox"
+                  name="General"
+                  checked="checked"
+                  class="form-check-input"
+                />
+              </div>
+              <div class="form-check-inline">
+                <span class="form-check-label">VFX</span>
+                <input type="checkbox" name="VFX" class="form-check-input" />
+              </div>
+              <div class="form-check-inline">
+                <span class="form-check-label">Arts</span>
+                <input type="checkbox" name="Arts" class="form-check-input" />
+              </div>
+              <div class="form-check-inline">
+                <span class="form-check-label">Development</span>
+                <input type="checkbox" name="Development" class="form-check-input" />
+              </div>
+              <br />
             
-        </div>   
+              <label for="contactReason" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">¿How can I help you?</label>
+              <br />
+              <div class="form-floating">
+                <textarea
+                  id="contactReason"
+                  placeholder="I love to create new and awesome things :D"
+                  class="form-control"
+                >
+                </textarea>
+              </div>
+              <br />
+              <div class="d-flex justify-content-around">
+                <input type="submit" value="Let's Talk :)" class="btn btn-primary"/>
+                <input type="reset" value="Ups forgetit :(" class="btn btn-primary"/>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Home con cards de servicios-->
+    <section id="Home" class="homeGroup homeVfx container-fluid">
+      <div class="card-group">
+        <div class="card text-white">
+          <img src="./../Assets/Projects/VFX/Premio_Mujer.jpg" class="card-img-top" alt="...">
+          <div class="card-body cartaVfxC">
+            <h5 class="card-title">Show proposal</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <a href="#" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#info" data-mdb-whatever="@Info">More Info</a>
+          </div>
+        </div>
+        <div class="card text-white">
+          <img src="./../Assets/Projects/VFX/Premio_Mujer.jpg" class="card-img-top" alt="...">
+          <div class="card-body cartaVfxC">
+            <h5 class="card-title">Stage Design</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#info" data-mdb-whatever="@Info">More Info</a>
+          </div>
+        </div>
+        <div class="card text-white">
+          <img src="./../Assets/Projects/VFX/Premio_Mujer.jpg" class="card-img-top" alt="...">
+          <div class="card-body cartaVfxC">
+            <h5 class="card-title">Content Development</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <a href="#" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#info" data-mdb-whatever="@Info">More Info</a>
+          </div>
+        </div>
+        <div class="card text-white">
+          <img src="./../Assets/Projects/VFX/Premio_Mujer.jpg" class="card-img-top" alt="...">
+          <div class="card-body cartaVfxC">
+            <h5 class="card-title">Content Direction</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <a href="#" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#info" data-mdb-whatever="@Info">More Info</a>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- Skillset VFX -->
-    <section id="Skillset" class="skillsetClass">
-        <div class="groupSkill">
-            <div id="generalSkills">
-            <div id="VFX">
-                <h3>VFX</h3>
-                <div  class="skillItem hexaMain vfxStyleBorder">
-                    <a class="skillDesc">After Effects</a>
-                    <img src="./../Assets/Imagenes/Soft/despues-de-los-efectos.png"/>
+    <!-- ABOUT -->
+    <section id="About" class="About aboutVfx container-fluid d-flex">
+      <div class="row align-content-center">
+        <div class="titleV col-md-2 col-sm-1 justify-content-center">
+          <p>About</p>
+        </div>
+        <div class="aboutPhoto col-md-5 d-flex justify-content-center align-content-center">
+          <img src="./../Assets/selfportrait.jpg"/>
+        </div>
+        <div class="aboutDesc col-md-5 col-sm-11 d-flex align-content-center">
+          <p>Visual Artist far interested in cross-bounds between tech, creativity and marketing with Wide experience in creation, planning and execution of digital and interactive products  for high scale projects in broadcast, live-shows, education and marketing (direction, execution, team leadership and budged projections). Developing new skills on web and software development. Commited to be envolved in great team work enviroment focused in goals.
+            Open to relocate.</p>
+        </div>
+      </div>
+    </section>
+    <!-- SKILLSET -->
+    
+    <section id="Skillset" class="Skillset skillsetVfx container-fluid">
+      <div class="row">
+        <h1 class="titleV d-flex justify-content-center align-items-center col-md-2">SkillSet</h1>
+        <div class="fullskills col">
+          
+          <!-- VFX General -->
+          <div class="vfxSkills">
+            <h1>VFX</h1>
+            <div class="mainSG">
+              <div class="containerSG">
+                <div><a href="#">
+                  <img src="./Assets/Imagenes/Soft/apple.png"/>
+                </a>
+              </div>
+                <div>
+                  <img src="./Assets/Imagenes/Soft/microsoft.png"/>
                 </div>
-                <div class="skillItem hexaMain vfxStyleBorder">
-                    <a class="skillDesc">Premiere</a>
-                    <img src="./../Assets/Imagenes/Soft/estreno-profesional.png"/>
+                <div>
+                  <img src="./Assets/Imagenes/Soft/excel.png"/>
                 </div>
+                <div>
+                  <img src="./Assets/Imagenes/Soft/office.png"/>
+                </div>
+                <div>
+                  <img src="./Assets/Imagenes/Soft/powerpoint.png"/>
+                </div>
+                <div>
+                  <img src="./Assets/Imagenes/Soft/word.png"/>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <h1>Skillset</h1>
+      </div>
     </section>
-    <!-- Projects VFX -->
-    <section id="Projects" class="projectsClassVfx">
-        <h1>Projects</h1>
-        <a id="Project1" class="hexaMain vfxStyleBorder" href="./Assets/Projects/VFX/ICC.jpg">
-            <img src="./../Assets/Imagenes/VFX/ICC.jpg" id="P1Ph" title="Internationl Chamber of comerce" alt="Show with huge led screen"/>
-            <h3>Project 1</h3>
-            <p class="projectDesc">International Chamber of Comerce Bogotá Colombia</p>
-        </a>
-        <a id="Project2" class="hexaMain vfxStyleBorder" href="./Assets/Projects/Art/FlamingoToteBag.jpg">
-            <img src="./../Assets/Projects/VFX/Premio_Mujer.jpg" id="P2Ph" title="Ilustration of a Flamingo in a totebag" alt="Pink Flamingo over a blue background"/>
-            <h3>Project 2</h3>
-            <p class="projectDesc">Mujer Cafam</p>
-        </a>
-        <a id="Project3" class="hexaMain vfxStyleBorder" href="https://www.youtube.com/watch?v=NGb0wuEV_6U" target="_blank">
-            <img src="./../Assets/selfportrait.jpg" id="P3Ph" title="Developement" alt="Computers on a desk"/>
-            <h3>Project 3</h3>
-            <p class="projectDesc">Test Project</p>
-        </a>
-        <a id="Project4" class="hexaMain vfxStyleBorder" href="./Assets/Projects/Art/Iguana.jpg" target="_blank">
-            <img src="./../Assets/Projects/Art/Iguana.jpg" id="P4Ph" title="Ilustration of a Iguana" alt="Iguana"/>
-            <h3>Project 4</h3>
-            <p class="projectDesc">Test Project</p>
-        </a>
-        
-    </section>
-    <!-- Contact VFX-->
-    <section id="ContactVfx" class="contactClassVfx">
-        <div class="divContact">
-             <a href="https://www.instagram.com/raphoto1/" target="_blank" id="insta" class="linkBox">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="146.411" height="146.378" viewBox="0 0 146.411 146.378">
-                 <path id="Icon_awesome-instagram" data-name="Icon awesome-instagram" d="M73.216,37.9a37.529,37.529,0,1,0,37.529,37.529A37.47,37.47,0,0,0,73.216,37.9Zm0,61.929a24.4,24.4,0,1,1,24.4-24.4A24.443,24.443,0,0,1,73.216,99.826Zm47.818-63.464a8.754,8.754,0,1,1-8.754-8.754A8.733,8.733,0,0,1,121.035,36.362Zm24.856,8.884c-.555-11.726-3.234-22.113-11.824-30.67C125.509,6.018,115.123,3.34,103.4,2.752c-12.085-.686-48.308-.686-60.393,0-11.693.555-22.08,3.234-30.67,11.791S1.1,33.488.509,45.214c-.686,12.085-.686,48.308,0,60.393.555,11.726,3.234,22.113,11.824,30.67S31.277,147.513,43,148.1c12.085.686,48.308.686,60.393,0,11.726-.555,22.113-3.234,30.67-11.824,8.558-8.558,11.236-18.944,11.824-30.67.686-12.085.686-48.276,0-60.361Zm-15.613,73.328a24.7,24.7,0,0,1-13.914,13.914c-9.636,3.822-32.5,2.94-43.147,2.94s-33.545.849-43.147-2.94a24.7,24.7,0,0,1-13.914-13.914c-3.822-9.636-2.94-32.5-2.94-43.147s-.849-33.545,2.94-43.147A24.7,24.7,0,0,1,30.069,18.365c9.636-3.822,32.5-2.94,43.147-2.94s33.545-.849,43.147,2.94a24.7,24.7,0,0,1,13.914,13.914c3.822,9.636,2.94,32.5,2.94,43.147S134.1,108.971,130.278,118.574Z" transform="translate(0.005 -2.238)"/>
-               </svg>
-                 <h3>Instagram</h3>
-                 
-             </a>
-             <a href="https://www.linkedin.com/in/rafael-mart%C3%ADnez-0a579b63/" target="_blank" id="Linkedin" class="linkBox">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="144.555" height="144.555" viewBox="0 0 144.555 144.555">
-                     <path id="Icon_awesome-linkedin" data-name="Icon awesome-linkedin" d="M134.23,2.25H10.293A10.37,10.37,0,0,0,0,12.672V136.383a10.37,10.37,0,0,0,10.293,10.422H134.23a10.4,10.4,0,0,0,10.325-10.422V12.672A10.4,10.4,0,0,0,134.23,2.25Zm-90.541,123.9H22.264V57.168H43.721v68.986ZM32.977,47.746A12.423,12.423,0,1,1,45.4,35.323,12.428,12.428,0,0,1,32.977,47.746ZM124,126.154H102.576V92.6c0-8-.161-18.3-11.132-18.3C80.28,74.3,78.57,83.014,78.57,92.016v34.138H57.144V57.168H77.7V66.59h.29c2.872-5.421,9.874-11.132,20.3-11.132,21.683,0,25.717,14.294,25.717,32.88Z" transform="translate(0 -2.25)"/>
-                   </svg>     
-                 <h3>Linkedin</h3>
-             </a>
-             <a href="https://www.behance.net/Raphoto1" target="_blank" id="Behance"class="linkBox">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="154.462" height="154.462" viewBox="0 0 154.462 154.462">
-                     <path id="Icon_awesome-behance-square" data-name="Icon awesome-behance-square" d="M64.3,92.238c0,6.654-4.827,8.757-10.757,8.757H37.995V82.756h15.86C60.268,82.791,64.3,85.446,64.3,92.238ZM61.647,63.862c0-6.1-4.724-7.551-9.964-7.551H38.029V71.758H52.752c5.206,0,8.9-2.276,8.9-7.9Zm45.615,8c-6.309,0-10.516,3.931-10.93,10.24h21.445C117.191,75.723,113.881,71.861,107.261,71.861Zm47.2-53.062V140.162a16.554,16.554,0,0,1-16.549,16.549H16.549A16.554,16.554,0,0,1,0,140.162V18.8A16.554,16.554,0,0,1,16.549,2.25H137.912A16.554,16.554,0,0,1,154.462,18.8ZM93.677,55H120.5V48.485H93.677ZM78.851,93.031c0-8.309-3.931-15.481-12.067-17.791,5.93-2.827,9.033-6.1,9.033-12.757,0-13.171-9.826-16.377-21.17-16.377h-31.2v66.2h32.1C67.577,112.235,78.851,106.477,78.851,93.031Zm52.165-5.1c0-14.171-8.309-26-23.307-26C93.091,61.932,83.2,72.9,83.2,87.307c0,14.929,9.413,25.169,24.514,25.169,11.447,0,18.86-5.137,22.445-16.136H118.536c-1.276,4.1-6.413,6.241-10.412,6.241-7.723,0-11.757-4.517-11.757-12.171h34.547C130.948,89.618,131.017,88.756,131.017,87.928Z" transform="translate(0 -2.25)"/>
-                 </svg>
-                 <h3>behance</h3> 
-             </a>
-             <a id="Mail" class="linkBox" href="./../Pages/mailContact.html">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="221.131" height="174.622" viewBox="0 0 221.131 174.622">
-                     <g id="Icon_feather-mail" data-name="Icon feather-mail" transform="translate(10.927 4)">
-                       <path id="Trazado_8" data-name="Trazado 8" d="M22.328,6H176.95a19.385,19.385,0,0,1,19.328,19.328V141.294a19.385,19.385,0,0,1-19.328,19.328H22.328A19.385,19.385,0,0,1,3,141.294V25.328A19.385,19.385,0,0,1,22.328,6Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
-                       <path id="Trazado_9" data-name="Trazado 9" d="M196.278,9,99.639,76.647,3,9" transform="translate(0 16.328)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
-                     </g>
-                   </svg>   
-                 <h3>Mail</h3>
-             </a>
+    <!-- PROJECTS -->
+    <section id="Projects" class="Projects projectsVfx container-fluid w-100">
+      <div class="row">
+        <div class="titleV d-flex justify-content-center align-items-center col-md-2">
+          <p>Projects</p>
         </div>
-         <h1>Contact</h1>
-         <!--Agregar mail popup a futuro-->
-     </section>
+        <div class="carusel d-flex justify-content-center align-content-center col-md-9 col-sm-12">
+          <div id="carouselExampleCaptions" class="carousel col-md-9 col-sm-12 carousel-light slide" data-bs-ride="carousel">
+            <div class="carousel-indicators align-content-center">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./../Assets/Projects/Art/FlamingoToteBag.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Personal Shop</h5>
+                  <p>Flamingo in watercolor and digital coloring</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./../Assets/Projects/Dev/Dev.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Printscreen of web</h5>
+                  <p>webpage for x</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./../Assets/Projects/VFX/ICC.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>International Chamber of commerce</h5>
+                  <p>Content design and show operation for 15mts screen lenght</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
-        <h4>Rafael Martinez 2022</h4>
-        <h4>Visual Artist</h4>
+      <h4>Rafael Martinez 2022</h4>
+      <h4>Visual Artist</h4>
     </footer>
-</body>
-</body>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+></script>
+  </body>
 </html>

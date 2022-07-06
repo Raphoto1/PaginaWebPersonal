@@ -1,4 +1,4 @@
-#About{
+.About{
     background-color: var(--colorPar);
     height: 100%;
     width: 100%;
@@ -25,5 +25,10 @@
     .aboutDesc{
         color: white;
         font-size: large;
+    }
+}
+@each $categoria, $colorPar in $categoriasPar {
+    .about#{$categoria}{
+        background-color: $colorPar;
     }
 }

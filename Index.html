@@ -52,9 +52,9 @@ rel="stylesheet"
                     </a>
                   </li>
                   <li class="nav-item ">
-                    <a class="nav-link colorNav" href="./Pages/mailContact.html">
-                      Let's Talk
-                    </a>
+                    <button type="button" class="btn" data-mdb-toggle="modal" data-mdb-target="#info" data-mdb-whatever="@Info">
+                      Let's Talk!
+                    </button>
                   </li>
                   <li class="nav-item ">
                     <a class="nav-link colorNav" href="https://www.facebook.com/esteesmicuento">
@@ -80,6 +80,124 @@ rel="stylesheet"
       </div>
   </nav>
     </header>
+    <!-- Modal para contacto -->
+    <div class="modal fade" id="info" tabindex="-1" aria-labelledby="info" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Let's Talk</h5>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="container-fluid py-1 justify-content-center col-sm-8 col-md-12 align-items-center">
+              <label for="Name" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded"
+                >Name or Organization</label
+              >
+              <input type="text" id="Name" class="form-control col-md-2" />
+              <br />
+              <label for="Phone" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Phone</label>
+              <input
+                type="tel"
+                id="Phone"
+                placeholder="Phone Number"
+                class="form-control"
+              />
+              <br />
+              <label for="Email" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">E-mail</label>
+              <input
+                type="email"
+                id="Email"
+                placeholder="Your@mail.com"
+                class="form-control"
+              />
+              <br />
+              <label for="Country" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Country</label>
+              <select class="form-select">
+                <option selected="selected">Choose a Country</option>
+                <option>Colombia</option>
+                <option>Argentina</option>
+                <option>United States</option>
+              </select>
+              <br />
+              <div>
+                <h2 class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Reply via</h2>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="replyV"
+                    value="phoneC"
+                    class="form-check-input"
+                  />
+                  <label for="phoneC" class="form-check-label">Phone Call</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="replyV"
+                    value="emailC"
+                    class="form-check-input"
+                  />
+                  <label for="emailC" class="form-check-label">Email</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    type="radio"
+                    name="replyV"
+                    value="Whatsapp"
+                    class="form-check-input"
+                  />
+                  <label for="Whatsapp" class="form-check-label">Whatsapp</label>
+                </div>
+              </div>
+              <br />
+              <h2 class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Any Specific Area?</h2>
+              <div class="form-check-inline">
+                <span class="form-check-label">General</span>
+                <input
+                  type="checkbox"
+                  name="General"
+                  checked="checked"
+                  class="form-check-input"
+                />
+              </div>
+              <div class="form-check-inline">
+                <span class="form-check-label">VFX</span>
+                <input type="checkbox" name="VFX" class="form-check-input" />
+              </div>
+              <div class="form-check-inline">
+                <span class="form-check-label">Arts</span>
+                <input type="checkbox" name="Arts" class="form-check-input" />
+              </div>
+              <div class="form-check-inline">
+                <span class="form-check-label">Development</span>
+                <input type="checkbox" name="Development" class="form-check-input" />
+              </div>
+              <br />
+            
+              <label for="contactReason" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">¿How can I help you?</label>
+              <br />
+              <div class="form-floating">
+                <textarea
+                  id="contactReason"
+                  placeholder="I love to create new and awesome things :D"
+                  class="form-control"
+                >
+                </textarea>
+              </div>
+              <br />
+              <div class="d-flex justify-content-around">
+                <input type="submit" value="Let's Talk :)" class="btn btn-primary"/>
+                <input type="reset" value="Ups forgetit :(" class="btn btn-primary"/>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Home CON NAVEGACION A OTRAS PAGINAS-->
     <section id="Home" class="homeGroup">
       <div class="grid hexaGrid">
@@ -87,7 +205,7 @@ rel="stylesheet"
            
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <a class="hexLink" href="#About">
                     <div class='img Portrait'></div>
                 <h1 id="demo1">Hi, I´m Rafa</h1>
               </a>
@@ -95,7 +213,7 @@ rel="stylesheet"
           </li>
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <a class="hexLink" href="./Pages/Vfx.html">
                 <div class='img vfxMain'></div>
                 <h1 id="demo1">Vfx</h1>
                 <p id="demo2">Visual FX, Broadcast and Show content creation</p>
@@ -104,7 +222,7 @@ rel="stylesheet"
           </li>
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <a class="hexLink" href="./Pages/Arts.html">
                 <div class='img artsMain'></div>
                 <h1 id="demo1">Arts</h1>
                 <p id="demo2">Illustration and design</p>
@@ -113,7 +231,7 @@ rel="stylesheet"
           </li>
           <li class="hex">
             <div class="hexIn">
-              <a class="hexLink" href="#">
+              <a class="hexLink" href="./Pages/Development.html">
                 <div class='img devMain'></div>
                 <h1 id="demo1">Dev</h1>
                 <p id="demo2">Full Stack web Dev</p>
@@ -171,7 +289,7 @@ rel="stylesheet"
           </div>
     </section>
     <!-- ABOUT -->
-    <section id="About" class="container-fluid d-flex">
+    <section id="About" class="About container-fluid d-flex">
       <div class="row align-content-center">
         <div class="titleV col-md-2 col-sm-1 justify-content-center">
           <p>About</p>
@@ -187,7 +305,7 @@ rel="stylesheet"
     </section>
     <!-- SKILLSET -->
     
-    <section id="Skillset" class="container-fluid">
+    <section id="Skillset" class="Skillset container-fluid">
       <div class="row">
         <h1 class="titleV d-flex justify-content-center align-items-center col-md-2">SkillSet</h1>
         <div class="fullskills col">
@@ -303,14 +421,14 @@ rel="stylesheet"
       </div>
     </section>
     <!-- PROJECTS -->
-    <section id="Projects" class="container-fluid w-100">
+    <section id="Projects" class="Projects container-fluid w-100">
       <div class="row">
         <div class="titleV d-flex justify-content-center align-items-center col-md-2">
           <p>Projects</p>
         </div>
         <div class="carusel d-flex justify-content-center align-content-center col-md-9 col-sm-12">
           <div id="carouselExampleCaptions" class="carousel col-md-9 col-sm-12 carousel-light slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
+            <div class="carousel-indicators align-content-center">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>

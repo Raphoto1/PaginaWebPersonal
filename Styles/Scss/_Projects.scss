@@ -1,7 +1,12 @@
-#Projects{
+.Projects{
 height: 100%;
 background-color: var(--colorPar);
 }
 .carusel{
     height: 100vh;
+}
+@each $categoria, $colorPar in $categoriasPar {
+    .projects#{$categoria}{
+        background-color: $colorPar;
+    }
 }
