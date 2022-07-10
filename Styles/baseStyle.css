@@ -78,8 +78,7 @@
 .hex {
   position: relative;
   visibility: hidden;
-  outline: 1px solid transparent;
-  /* fix for jagged edges in FF on hover transition */
+  outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
   transition: all 0.5s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -90,20 +89,17 @@
 .hex::after {
   content: "";
   display: block;
-  padding-bottom: 90.602%;
-  /* =  100 / tan(60) * 1.5 */
+  padding-bottom: 90.602%; /* =  100 / tan(60) * 1.5 */
 }
 
 .hexIn {
   position: absolute;
   width: 96%;
-  padding-bottom: 110.851%;
-  /* =  width / sin(60) */
+  padding-bottom: 110.851%; /* =  width / sin(60) */
   margin: 2%;
   overflow: hidden;
   visibility: hidden;
-  outline: 1px solid transparent;
-  /* fix for jagged edges in FF on hover transition */
+  outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
   transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
   transition: all 0.5s;
 }
@@ -111,8 +107,7 @@
 .hexIn * {
   position: absolute;
   visibility: visible;
-  outline: 1px solid transparent;
-  /* fix for jagged edges in FF on hover transition */
+  outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
 }
 
 .hexLink {
@@ -217,75 +212,51 @@
 }
 
 /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-@media (min-width: 1201px) {
-  /* <- 5-4  hexagons per row */
+@media (min-width: 1201px) { /* <- 5-4  hexagons per row */
   #hexGrid {
     padding-bottom: 4.4%;
   }
-
   .hex {
-    width: 20%;
-    /* = 100 / 5 */
+    width: 20%; /* = 100 / 5 */
   }
-
-  .hex:nth-child(9n+6) {
-    /* first hexagon of even rows */
-    margin-left: 10%;
-    /* = width of .hex / 2  to indent even rows */
+  .hex:nth-child(9n+6) { /* first hexagon of even rows */
+    margin-left: 10%; /* = width of .hex / 2  to indent even rows */
   }
 }
-@media (max-width: 1200px) and (min-width: 901px) {
-  /* <- 4-3  hexagons per row */
+@media (max-width: 1200px) and (min-width: 901px) { /* <- 4-3  hexagons per row */
   #hexGrid {
     padding-bottom: 5.5%;
     font-size: 13px;
   }
-
   .hex {
-    width: 25%;
-    /* = 100 / 4 */
+    width: 25%; /* = 100 / 4 */
   }
-
-  .hex:nth-child(7n+5) {
-    /* first hexagon of even rows */
-    margin-left: 12.5%;
-    /* = width of .hex / 2  to indent even rows */
+  .hex:nth-child(7n+5) { /* first hexagon of even rows */
+    margin-left: 12.5%; /* = width of .hex / 2  to indent even rows */
   }
 }
-@media (max-width: 900px) and (min-width: 601px) {
-  /* <- 3-2  hexagons per row */
+@media (max-width: 900px) and (min-width: 601px) { /* <- 3-2  hexagons per row */
   #hexGrid {
     padding-bottom: 7.4%;
     font-size: 14px;
   }
-
   .hex {
-    width: 33.333%;
-    /* = 100 / 3 */
+    width: 33.333%; /* = 100 / 3 */
   }
-
-  .hex:nth-child(5n+4) {
-    /* first hexagon of even rows */
-    margin-left: 16.666%;
-    /* = width of .hex / 2  to indent even rows */
+  .hex:nth-child(5n+4) { /* first hexagon of even rows */
+    margin-left: 16.666%; /* = width of .hex / 2  to indent even rows */
   }
 }
-@media (max-width: 600px) {
-  /* <- 2-1  hexagons per row */
+@media (max-width: 600px) { /* <- 2-1  hexagons per row */
   #hexGrid {
     padding-bottom: 11.2%;
     font-size: 12px;
   }
-
   .hex {
-    width: 50%;
-    /* = 100 / 3 */
+    width: 50%; /* = 100 / 3 */
   }
-
-  .hex:nth-child(3n+3) {
-    /* first hexagon of even rows */
-    margin-left: 25%;
-    /* = width of .hex / 2  to indent even rows */
+  .hex:nth-child(3n+3) { /* first hexagon of even rows */
+    margin-left: 25%; /* = width of .hex / 2  to indent even rows */
   }
 }
 @media (max-width: 400px) {
@@ -423,7 +394,6 @@
     width: auto;
     overflow: hidden;
   }
-
   .aboutDesc {
     color: white;
     font-size: medium;
@@ -449,17 +419,14 @@
 
 .mainSG {
   display: flex;
-  --s: 100px;
-  /* size  */
-  --m: 4px;
-  /* margin */
+  --s: 100px; /* size  */
+  --m: 4px; /* margin */
   --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
   padding-bottom: 1.5%;
 }
 
 .containerSG {
-  font-size: 0;
-  /*disable white space between inline block element */
+  font-size: 0; /*disable white space between inline block element */
 }
 
 .containerSG div {
