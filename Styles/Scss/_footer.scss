@@ -4,29 +4,3 @@ footer{
     justify-content: space-between;
     padding-top: 1%;
 }
-.grupoRedes{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-}
-.colorInsta{
-    @extend .centrarTodo;
-    color: white;
-    background: map-get($Instacol, background );
-    padding: map-get($Instacol, padding );
-    border-radius: map-get($Instacol, border-radius );
-    height: map-get($tamanosFoot, height );
-    width: map-get($tamanosFoot, height );
-}
-.colorLin{
-    @extend .centrarTodo;
-    color: map-get($lincol, color);
-    padding: map-get($lincol , padding );
-    border-radius: map-get($lincol, border-radius );
-    height: map-get($tamanosFoot, height );
-    width: map-get($tamanosFoot, height );
-}
-
-.colorBe{
-    @extend .colorLin;
-}

@@ -18,7 +18,7 @@
   --tamanoImagenesSkill: 12vh;
 }
 
-.centrarTodo, .colorLin, .colorBe, .colorInsta {
+.centrarTodo {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -556,29 +556,6 @@ footer {
   flex-wrap: nowrap;
   justify-content: space-between;
   padding-top: 1%;
-}
-
-.grupoRedes {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-}
-
-.colorInsta {
-  color: white;
-  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-  padding: 4px;
-  border-radius: 25%;
-  height: 20px;
-  width: 20px;
-}
-
-.colorLin, .colorBe {
-  color: var(--generalColor);
-  padding: 4px;
-  border-radius: 25%;
-  height: 20px;
-  width: 20px;
 }
 
 .titleV {
