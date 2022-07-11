@@ -1,0 +1,41 @@
+.homeGroup{
+    background-color: var(--colorImpar);
+    width: 100%;
+    padding-top: 10%;
+    height: 100%;
+    padding-bottom: 10%;
+}
+@media only screen and (max-width: 850px) {
+    .homeGroup{
+        background-color: var(--colorImpar);
+        width: 100%;
+        padding-top: 20%;
+        height: 100%;
+        padding-bottom: 10%;
+    }
+}
+// cambiar color de fondos de cada section en cada page de categoria
+@each $categoria, $colorImp in $categoriasImp{
+    .home#{$categoria}{
+        background-color: $colorImp;
+    }
+}
+// crear las variedades de fondo de las cartas segun categoria
+@each $categoriaC, $col in $categoriasCards{
+    .carta#{$categoriaC}{
+        background-color: $col;
+        
+    }
+    
+}
+// cartas para categorias con Extend
+.card{
+    @extend .flip-in-diag-2-br
+}
+
+// animacion con demora de entrada de cards
+@for $demora from 1 to 5 {
+    .card:nth-child(#{$demora}){
+        animation-delay: 0.2s * $demora;
+    }
+}

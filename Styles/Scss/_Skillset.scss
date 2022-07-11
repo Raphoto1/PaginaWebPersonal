@@ -1,0 +1,72 @@
+.Skillset{
+  background-color: var(--colorImpar);
+  height: 100%;
+  padding-bottom: 5%;
+}
+//General
+.mainSG {
+    display:flex;
+    --s: 100px;  /* size  */
+    --m: 4px;    /* margin */
+    --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+    padding-bottom: 1.5%;
+  }
+  
+  .containerSG {
+    font-size: 0; /*disable white space between inline block element */
+  }
+  
+  .containerSG div {
+    width: var(--s);
+    margin: var(--m);
+    height: calc(var(--s)*1.1547); 
+    display: inline-block;
+    font-size:initial;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    background: var(--generalColor);
+    margin-bottom: calc(var(--m) - var(--s)*0.2885); 
+  }
+  .containerSG div img {
+    width: var(--s);
+    margin: var(--m);
+    height: calc(var(--s)*1.1547); 
+    display: inline-block;
+    font-size:initial;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-bottom: calc(var(--m) - var(--s)*0.1); 
+  }
+  .containerSG div:nth-child(odd) {
+    background:var(--colorPar);
+  }
+ 
+  .containerSG::before {
+    content: "";
+    width: calc(var(--s)/2 + var(--m));
+    float: left;
+    height: 120%;
+    shape-outside: repeating-linear-gradient(     
+                     #0000 0 calc(var(--f) - 3px),      
+                     #000  0 var(--f));
+  }
+  .fullskills div{
+    padding-bottom: 1%;
+  }
+  @media only screen and (max-width: 450px) {
+    .fullskills div{
+      padding-bottom: 15%;
+    }
+  }
+  @each $categoria, $colorImpar in $categoriasImp {
+    .skillset#{$categoria}{
+      background-color: $colorImpar;
+    }
+  }
+
+  // crear las variedades de fondo de los hexa pisando el codigo base
+@each $categoriaC, $col in $categoriasCards{
+  .containerSg#{$categoriaC} div:nth-child(odd){
+      background: $col;
+      
+  }
+  
+}

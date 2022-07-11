@@ -1,0 +1,36 @@
+@import "./_Variables.scss";
+@import "./_reset.scss";
+@import "./_header.scss";
+@import "./_hexagons.scss";
+@import "./_fotosHexa.scss";
+@import "./_Home.scss";
+@import "./_About.scss";
+@import "./_Skillset.scss";
+@import "./_Contact.scss";
+@import "./_Projects.scss";
+@import "./footer.scss";
+//elementos para aplicar en general directo
+.titleV{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 10em;
+}
+.colorNav{
+    color: gray;
+}
+
+#navega{
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    width: 100%;
+    background-color: white;
+}
+footer{
+    display: flex;
+    justify-content: space-around;    
+}

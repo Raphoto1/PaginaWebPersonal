@@ -1,0 +1,21 @@
+
+#contactForm{
+    background-color: var(--colorPar);
+    /* height: 100vh;
+    width: 100%; */
+}
+#contactForm h1{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 10rem;
+}
+.Contact{
+    background-color: var(--colorImpar);
+}
+.divContact{
+    display: flex;
+    justify-content: space-between;
+    a{
+        text-decoration: none;
+    }
+}

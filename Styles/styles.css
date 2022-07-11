@@ -1,9 +1,17 @@
 /*truco para que el fondo de cada section llegue hasta el final*/
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+=======
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}"
+>>>>>>> webV3
 /*colores por categoria y estilos para reutilizar*/
 :root {
   --colorImpar: rgb(230, 230, 230);
@@ -23,6 +31,7 @@
   --tamanoImagenesIn: 100%;
   --tamanoImagenesSkill: 150px;
 }
+<<<<<<< HEAD
 
 /*Media query desk*/
 @media only screen and (min-width: 481px) {
@@ -825,3 +834,5 @@
     background-color: var(--colorImpar);
   }
 }
+=======
+>>>>>>> webV3

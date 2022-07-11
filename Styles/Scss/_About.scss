@@ -1,0 +1,53 @@
+.About{
+    display: flex;
+    background-color: var(--colorPar);
+    height: 100%;
+    width: 100%;
+    .aboutPhoto{
+        @include tFoto(100%);
+        img{
+            height: 100%;
+            transform: none;
+            width: auto;
+            overflow: hidden;
+        }
+    }
+    .aboutDesc{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        color: white;
+        font-size: xx-large;
+    }
+    .aboutVideo{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        padding: 0;
+        iframe{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+    } 
+}
+@media only screen and (max-width: 850px) {
+    .aboutPhoto{
+        display: none !important;
+        @include tFoto(70%);
+        img{
+            height: 100%;
+            width: auto;
+            overflow: hidden;
+        }
+    }
+    .aboutDesc{
+        color: white;
+        font-size: medium;
+    }
+}
+@each $categoria, $colorPar in $categoriasPar {
+    .about#{$categoria}{
+        background-color: $colorPar;
+    }
+}
