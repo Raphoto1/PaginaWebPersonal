@@ -367,15 +367,6 @@
   height: 100%;
   width: 100%;
 }
-.About .aboutPhoto {
-  height: 100%;
-}
-.About .aboutPhoto img {
-  height: 100%;
-  transform: none;
-  width: auto;
-  overflow: hidden;
-}
 .About .aboutDesc {
   display: flex;
   align-content: center;
