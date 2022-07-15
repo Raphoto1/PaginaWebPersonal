@@ -1,12 +1,12 @@
 //animacion de entrada
-// .animado{
-//     @extend .flip-in-diag-2-br
-// }
-// @for $demora from 1 to 8 {
-//     .animado:nth-child(#{$demora}){
-//         animation-delay: 0.2s * $demora;
-//     }
-// }
+.animado{
+    @extend .flip-in-diag-2-br
+}
+@for $demora from 1 to 8 {
+    .animado:nth-child(#{$demora}){
+        animation-delay: 0.2s * $demora;
+    }
+}
 .homeGroup{
     background-color: var(--colorImpar);
     width: 100%;

@@ -38,7 +38,7 @@ $tiempoT: 0.5s;
             grid-column: 2 / span 2;
         }
         &:hover{
-            transform:rotatey(-20deg) rotateX(-30deg) scale(1.1, 1.1);
+            @extend .animHov
         }
     }
 }
