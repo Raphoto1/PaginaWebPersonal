@@ -2,9 +2,10 @@
 .animado{
     @extend .flip-in-diag-2-br
 }
-@for $demora from 1 to 8 {
-    .animado:nth-child(#{$demora}){
-        animation-delay: 0.2s * $demora;
+@each $turno, $tiempo in $demoras{
+    .animado#{$turno}{
+        @extend .animado;
+        animation-delay: $tiempo;
     }
 }
 .homeGroup{

@@ -24,7 +24,7 @@
   justify-content: center;
 }
 
-.flip-in-diag-2-br, .card, .animado {
+.flip-in-diag-2-br, .card, .animado, .animado8, .animado7, .animado6, .animado5, .animado4, .animado3, .animado2, .animado1 {
   -webkit-animation: flip-in-diag-2-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: flip-in-diag-2-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -55,27 +55,6 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes hovAnim {
-  from {
-    transform: rotatey(0deg) rotateX(0deg) scale(1, 1);
-  }
-  to {
-    transform: rotatey(-20deg) rotateX(-30deg) scale(1.1, 1.1);
-  }
-}
-@keyframes hovAnim {
-  from {
-    transform: rotatey(0deg) rotateX(0deg) scale(1, 1);
-  }
-  to {
-    transform: rotatey(-20deg) rotateX(-30deg) scale(1.1, 1.1);
-  }
-}
-.animHov, .Gallery .galleryItem:hover {
-  -webkit-animation: hovAnim 1s;
-          animation: hovAnim 1s;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -118,6 +97,10 @@
 .Gallery .galleryItem:nth-of-type(7n + 1) {
   grid-column: 2/span 2;
 }
+.Gallery .galleryItem:hover {
+  transform: rotatey(-20deg) rotateX(-30deg) scale(1.1, 1.1);
+}
+
 @media screen and (max-width: 508px) {
   .galleryItem:first-of-type {
     grid-column: 1/span 2 !important;
@@ -192,39 +175,44 @@
   background-image: url(./../../Assets/Imagenes/Extras/teach.jpg);
 }
 
-.animado:nth-child(1) {
+.animado1 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-.animado:nth-child(2) {
+.animado2 {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.animado:nth-child(3) {
+.animado3 {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.animado:nth-child(4) {
+.animado4 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.animado:nth-child(5) {
+.animado5 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-.animado:nth-child(6) {
+.animado6 {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
 
-.animado:nth-child(7) {
+.animado7 {
   -webkit-animation-delay: 1.4s;
           animation-delay: 1.4s;
+}
+
+.animado8 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 .homeGroup {

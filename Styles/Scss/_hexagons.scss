@@ -1,3 +1,4 @@
+//usar imagenes horizontales o cuadradas
 // tamaño columna control general, 1 rem = 16px
 $columna: 133px;
 $espaciado: 16px;
@@ -38,7 +39,7 @@ $tiempoT: 0.5s;
             grid-column: 2 / span 2;
         }
         &:hover{
-            @extend .animHov
+            transform:rotatey(-20deg) rotateX(-30deg) scale(1.1, 1.1);
         }
     }
 }
