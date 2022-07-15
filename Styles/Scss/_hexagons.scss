@@ -5,7 +5,7 @@ $tiempoT: 0.5s;
 .Gallery{
     display: grid;
     grid-template-columns: repeat(auto-fit, $columna);
-    grid-auto-rows: 200px;
+    grid-auto-rows: 210px;
     justify-content: center;
     width: 85%;
     max-width: 1200px;
@@ -26,6 +26,7 @@ $tiempoT: 0.5s;
         top: 0;
         left: 0;
         transition: $tiempoT;
+        
         //clip a hexagono
         clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
         //ajustar separacion y ocupa 2 espacios de grilla
@@ -37,8 +38,7 @@ $tiempoT: 0.5s;
             grid-column: 2 / span 2;
         }
         &:hover{
-            transform:rotatey(20deg);
-            
+            transform:rotatey(-20deg) rotateX(-30deg) scale(1.1, 1.1);
         }
     }
 }
