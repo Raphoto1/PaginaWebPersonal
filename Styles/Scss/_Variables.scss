@@ -9,7 +9,7 @@
     --colorParArts: rgb(149, 102, 102);
     --colorParDev: rgb(149, 140, 102);
     --generalColor: #009CDE; 
-    --vfxColor: #CA00DE;
+    --vfxColor: rgb(202, 0, 222);
     --artsColor: #DE002D;
     --devColor: #DEB100;
     --bordeGeneral: 5px;
@@ -17,11 +17,6 @@
     --tamanoImagenesIn: 25vh;
     --tamanoImagenesSkill: 12vh;
 }
-$Instacol: (
-    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d),
-    padding: 4px,
-    border-radius: 25%,
-);
 $lincol:(
     color: var(--generalColor),
     padding: 4px,

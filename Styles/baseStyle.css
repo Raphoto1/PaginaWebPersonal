@@ -9,7 +9,7 @@
   --colorParArts: rgb(149, 102, 102);
   --colorParDev: rgb(149, 140, 102);
   --generalColor: #009CDE;
-  --vfxColor: #CA00DE;
+  --vfxColor: rgb(202, 0, 222);
   --artsColor: #DE002D;
   --devColor: #DEB100;
   --bordeGeneral: 5px;
@@ -65,203 +65,78 @@
   background-color: blue;
 }
 
-#hexGrid {
+.Gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 133px);
+  grid-auto-rows: 200px;
+  justify-content: center;
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 16px;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+}
+.Gallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Gallery .galleryItem {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  font-family: sans-serif;
-  list-style-type: none;
-}
-
-.hex {
   position: relative;
-  visibility: hidden;
-  outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
-  transition: all 0.5s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  will-change: transform;
-  transition: all 0.5s;
-}
-
-.hex::after {
-  content: "";
-  display: block;
-  padding-bottom: 90.602%; /* =  100 / tan(60) * 1.5 */
-}
-
-.hexIn {
-  position: absolute;
-  width: 96%;
-  padding-bottom: 110.851%; /* =  width / sin(60) */
-  margin: 2%;
-  overflow: hidden;
-  visibility: hidden;
-  outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
-  transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
-  transition: all 0.5s;
-}
-
-.hexIn * {
-  position: absolute;
-  visibility: visible;
-  outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
-}
-
-.hexLink {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-  transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
-}
-
-/*** HEX CONTENT **********************************************************************/
-.hex img {
-  left: -100%;
-  right: -100%;
-  width: auto;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.hex h1, .hex p {
-  width: 100%;
-  padding: 5%;
-  align-items: center;
-  box-sizing: border-box;
-  font-weight: 500;
-  opacity: 0;
-}
-
-#demo1 {
-  color: white;
-  text-transform: capitalize;
-  text-align: center;
-  bottom: 50%;
-  padding-top: 50%;
-  font-size: 1.5em;
-  z-index: 1;
-}
-
-.hex h1:before, .hex h1:after {
-  display: inline-block;
-  margin: 0 0.5em;
-  width: 0.25em;
-  height: 0.03em;
-  background: #ffffff;
-  vertical-align: middle;
-  transition: all 0.3s;
-  text-align: center;
-}
-
-#demo2 {
-  top: 50%;
-  text-align: center;
-  text-transform: uppercase;
-  color: lightgray;
-}
-
-.img {
-  position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background-position: center center;
-  background-size: cover;
-  overflow: hidden;
+  transition: 0.5s;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  grid-column: span 2;
+  height: 282px;
+}
+.Gallery .galleryItem:nth-of-type(7n + 1) {
+  grid-column: 2/span 2;
+}
+.Gallery .galleryItem:hover {
+  transform: rotatey(20deg);
 }
 
-.img:before, .img:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: "";
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.img:before {
-  background: var(--generalColor);
-}
-
-.img:after {
-  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.3), transparent);
-}
-
-/*** HOVER EFFECT  **********************************************************************/
-.hexLink:hover h1, .hexLink:focus h1,
-.hexLink:hover p, .hexLink:focus p {
-  opacity: 1;
-  transition: 0.8s;
-}
-
-.hexIn:hover .img:before,
-.hexIn:hover .img:after,
-.hexIn:hover .hexLink {
-  opacity: 1;
-}
-
-/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-@media (min-width: 1201px) { /* <- 5-4  hexagons per row */
-  #hexGrid {
-    padding-bottom: 4.4%;
+@media screen and (max-width: 508px) {
+  .galleryItem:first-of-type {
+    grid-column: 1/span 2 !important;
   }
-  .hex {
-    width: 20%; /* = 100 / 5 */
-  }
-  .hex:nth-child(9n+6) { /* first hexagon of even rows */
-    margin-left: 10%; /* = width of .hex / 2  to indent even rows */
+  .Gallery {
+    grid-auto-rows: 282px;
   }
 }
-@media (max-width: 1200px) and (min-width: 901px) { /* <- 4-3  hexagons per row */
-  #hexGrid {
-    padding-bottom: 5.5%;
-    font-size: 13px;
-  }
-  .hex {
-    width: 25%; /* = 100 / 4 */
-  }
-  .hex:nth-child(7n+5) { /* first hexagon of even rows */
-    margin-left: 12.5%; /* = width of .hex / 2  to indent even rows */
+@media screen and (min-width: 509px) and (max-width: 685px) {
+  .galleryItem:nth-child(odd) {
+    grid-column: 2/span 2;
   }
 }
-@media (max-width: 900px) and (min-width: 601px) { /* <- 3-2  hexagons per row */
-  #hexGrid {
-    padding-bottom: 7.4%;
-    font-size: 14px;
-  }
-  .hex {
-    width: 33.333%; /* = 100 / 3 */
-  }
-  .hex:nth-child(5n+4) { /* first hexagon of even rows */
-    margin-left: 16.666%; /* = width of .hex / 2  to indent even rows */
+@media screen and (min-width: 686px) and (max-width: 857px) {
+  .galleryItem:nth-of-type(3n + 1) {
+    grid-column: 2/span 2;
   }
 }
-@media (max-width: 600px) { /* <- 2-1  hexagons per row */
-  #hexGrid {
-    padding-bottom: 11.2%;
-    font-size: 12px;
-  }
-  .hex {
-    width: 50%; /* = 100 / 3 */
-  }
-  .hex:nth-child(3n+3) { /* first hexagon of even rows */
-    margin-left: 25%; /* = width of .hex / 2  to indent even rows */
+@media screen and (min-width: 858px) and (max-width: 1033px) {
+  .galleryItem:nth-of-type(4n + 1) {
+    grid-column: 2/span 2;
   }
 }
-@media (max-width: 400px) {
-  #hexGrid {
-    font-size: 8px;
+@media screen and (min-width: 1034px) and (max-width: 1208px) {
+  .galleryItem:nth-of-type(5n + 1) {
+    grid-column: 2/span 2;
+  }
+}
+@media screen and (min-width: 1209px) and (max-width: 1384px) {
+  .galleryItem:nth-of-type(6n + 1) {
+    grid-column: 2/span 2;
+  }
+}
+@media screen and (min-width: 1385px) {
+  .galleryItem:nth-of-type(7n + 1) {
+    grid-column: 2/span 2;
   }
 }
 .Portrait {
@@ -304,8 +179,101 @@
   background-color: var(--colorImpar);
   width: 100%;
   padding-top: 10%;
-  height: 100%;
+  height: 100vh;
+  max-height: 100%;
   padding-bottom: 10%;
+}
+
+.hexaR {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  font-size: xx-large;
+  filter: opacity(0);
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+}
+
+.galleryItem:hover .hexaR {
+  filter: opacity(1);
+}
+
+@media (any-hover: none) {
+  .hexaR {
+    filter: opacity(0.9) drop-shadow(-5px -5px 5px black);
+  }
+}
+.colorH {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+}
+
+.galleryItem:hover .colorH {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.colorHVfxC {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+  background-color: var(--vfxColor);
+  filter: opacity(0);
+  top: 0;
+  left: 0;
+}
+
+.colorHArtsC {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+  background-color: var(--artsColor);
+  filter: opacity(0);
+  top: 0;
+  left: 0;
+}
+
+.colorHDevC {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+  background-color: var(--devColor);
+  filter: opacity(0);
+  top: 0;
+  left: 0;
+}
+
+.galleryItem:hover .colorHVfxC {
+  background-color: var(--vfxColor);
+  filter: opacity(0.5);
+}
+
+.galleryItem:hover .colorHArtsC {
+  background-color: var(--artsColor);
+  filter: opacity(0.5);
+}
+
+.galleryItem:hover .colorHDevC {
+  background-color: var(--devColor);
+  filter: opacity(0.5);
 }
 
 @media only screen and (max-width: 850px) {
