@@ -216,11 +216,14 @@
 }
 
 .homeGroup {
-  background-color: var(--colorImpar);
+  background: url(/Assets/BG/Chia\ colombia1.jpg);
   width: 100%;
   padding-top: 10%;
   height: 100%;
   padding-bottom: 10%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .hexaR {
@@ -244,11 +247,14 @@
   filter: opacity(1);
 }
 
+<<<<<<< HEAD
 @media (any-hover: none) {
   .hexaR {
     filter: opacity(0.9) drop-shadow(-1px -1px 1px black);
   }
 }
+=======
+>>>>>>> WebV4
 .colorH {
   display: flex;
   width: 100%;
@@ -368,18 +374,42 @@
           animation-delay: 0.8s;
 }
 
+@media (any-hover: none) {
+  .hexaR {
+    filter: opacity(1) drop-shadow(-1px -1px 1px black);
+  }
+  .colorH {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .colorHVfxC {
+    background-color: var(--vfxColor);
+    filter: opacity(0.5);
+  }
+  .colorHArtsC {
+    background-color: var(--artsColor);
+    filter: opacity(0.5);
+  }
+  .colorHDevC {
+    background-color: var(--devColor);
+    filter: opacity(0.5);
+  }
+}
 .About {
   display: flex;
   background-color: var(--colorPar);
   height: 100%;
   width: 100%;
 }
+.About .titleV {
+  justify-content: center;
+}
 .About .aboutDesc {
   display: flex;
   align-content: center;
   align-items: center;
   color: white;
-  font-size: xx-large;
+  font-size: x-large;
+  padding: auto;
 }
 .About .aboutVideo {
   display: flex;
@@ -393,7 +423,7 @@
   padding: 0;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 771px) {
   .aboutPhoto {
     display: none !important;
     height: 70%;
@@ -428,7 +458,7 @@
 
 .mainSG {
   display: flex;
-  --s: 100px; /* size  */
+  --s: 170px; /* size  */
   --m: 4px; /* margin */
   --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
   padding-bottom: 1.5%;
