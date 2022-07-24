@@ -407,6 +407,8 @@
   display: flex;
   align-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   color: white;
   font-size: x-large;
   padding: auto;
