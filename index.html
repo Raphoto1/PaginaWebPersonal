@@ -96,7 +96,7 @@ rel="stylesheet"
               <label for="Name" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded"
                 >Name or Organization</label
               >
-              <input type="text" id="Name" class="form-control col-md-2" />
+              <input type="text" name="Nombre" id="Name" class="form-control col-md-2" />
               <br />
               <label for="Phone" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Phone</label>
               <input
@@ -114,18 +114,20 @@ rel="stylesheet"
                 class="form-control"
               />
               <br />
-              <label for="Country" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Country</label>
+              <label for="Country" name="Pais" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Country</label>
               <select class="form-select">
                 <option selected="selected">Choose a Country</option>
                 <option>Colombia</option>
                 <option>Argentina</option>
                 <option>United States</option>
+                <option>Other</option>
               </select>
               <br />
               <div>
                 <h2 class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Reply via</h2>
                 <div class="form-check form-check-inline">
                   <input
+                    name="Reply Via"
                     type="radio"
                     name="replyV"
                     value="phoneC"
@@ -181,6 +183,7 @@ rel="stylesheet"
               <br />
               <div class="form-floating">
                 <textarea
+                name="info necesaria"
                   id="contactReason"
                   placeholder="I love to create new and awesome things :D"
                   class="form-control"
